@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Profile Details | EternalVows</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#800020",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221015",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom scrollbar for sidebar */
+        aside::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        aside::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        aside::-webkit-scrollbar-thumb {
+            background: #e7cfd5;
+            border-radius: 10px;
+        }
+
+        aside::-webkit-scrollbar-thumb:hover {
+            background: #9a4c5f;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#1b0d11] dark:text-white antialiased">
+    <div class="flex min-h-screen overflow-x-hidden">
+        <!-- Side Navigation -->
+        <aside id="sidebar"
+            class="w-72 fixed left-0 top-0 h-full border-r border-border-soft dark:border-white/10 bg-white dark:bg-background-dark z-50 transition-transform duration-300 -translate-x-full lg:translate-x-0 overflow-y-auto">
+            <div class="flex flex-col h-full p-6 justify-between">
+                <div class="space-y-8">
+                    <!-- Logo -->
+                    <div class="flex items-center gap-3 px-2">
+                        <div class="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">favorite</span>
+                        </div>
+                        <h2 class="text-2xl font-black tracking-tight font-serif text-primary">EternalVows</h2>
+                    </div>
+                    <!-- User Profile Brief -->
+                    <div class="flex items-center gap-3 p-2">
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-primary/20"
+                            data-alt="Professional portrait of a young Indian man"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrr1VuX3sBAKD-x94-HjvNxCX8uLWlVrc5-e5DVqHH2JKkKdCUajS2o5rZfUHedywUfpwqjfXucbnr2EGFkAQry8I1oYf92Y8ZPx5VySZFwYdQQOevUhTkfg2H7Co5ccudM5WFGchIXrUtw2-E2tlbVexphAs37p1BaP5_eFS9K5F9ugVDQlWc1EgD26eQD1ui4MU_3lHozzCL_aIB2fD5uqTJCop4_zWwwHPJmN1098ZjplqQqd5XaDiHWEL4ASWg4YnqULhgjA");'>
+                        </div>
+                        <div class="flex flex-col">
+                            <h1 class="text-sm font-bold">Namaste, Rahul</h1>
+                            <p class="text-maroon-subtle dark:text-maroon-subtle text-xs">Premium Member</p>
+                        </div>
+                    </div>
+                    <!-- Nav Links -->
+                    <nav class="space-y-1">
+                        <a href="dashboard.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors">
+                            <span class="material-symbols-outlined">dashboard</span>
+                            <span class="text-sm">Dashboard</span>
+                        </a>
+                        <a href="profile.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-xl bg-cream-accent text-primary font-semibold">
+                            <span class="material-symbols-outlined">person</span>
+                            <span class="text-sm">My Profile</span>
+                        </a>
+                        <a href="search.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors">
+                            <span class="material-symbols-outlined">search</span>
+                            <span class="text-sm">Search</span>
+                        </a>
+
+                        <a href="interest_requests.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors">
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="text-sm">Interests</span>
+                        </a>
+                        <a href="chat.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors">
+                            <span class="material-symbols-outlined">chat_bubble</span>
+                            <span class="text-sm">Messages</span>
+                            <span class="ml-auto bg-primary text-white text-[10px] px-2 py-0.5 rounded-full">3</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors"
+                            href="settings.html">
+                            <span class="material-symbols-outlined">settings</span>
+                            <span class="text-sm">Settings</span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="pt-6 border-t border-border-soft dark:border-white/10">
+                    <button onclick="location.href='subscription.html'"
+                        class="w-full bg-primary hover:bg-primary/90 text-white rounded-xl py-3 text-sm font-bold transition-all shadow-lg shadow-primary/20">
+                        Upgrade Now
+                    </button>
+                </div>
+            </div>
+        </aside>
+        <!-- Main Content Area -->
+        <main class="lg:ml-72 flex-1 min-h-screen transition-all duration-300">
+            <!-- Top Header -->
+            <header
+                class="sticky top-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-border-soft dark:border-white/10 px-8 py-3 z-40">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <button onclick="document.getElementById('sidebar').classList.toggle('-translate-x-full');"
+                            class="lg:hidden p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors">
+                            <span class="material-symbols-outlined">menu</span>
+                        </button>
+                        <div>
+                            <h2 class="text-sm font-bold text-gray-900 dark:text-white">Profile Details</h2>
+                            <p class="text-xs text-maroon-subtle">My Personal Information</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="relative hidden md:block w-64">
+                            <span
+                                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-maroon-subtle">search</span>
+                            <input
+                                class="w-full pl-12 pr-4 py-2.5 bg-cream-accent/50 border-none focus:ring-2 focus:ring-primary/20 rounded-xl text-sm placeholder:text-maroon-subtle"
+                                placeholder="Search IDs..." type="text" />
+                        </div>
+                        <button
+                            class="md:hidden p-2.5 bg-cream-accent/50 rounded-xl hover:bg-cream-accent text-maroon-subtle transition-colors">
+                            <span class="material-symbols-outlined">search</span>
+                        </button>
+                        <button
+                            class="p-2.5 bg-cream-accent/50 rounded-xl hover:bg-cream-accent text-maroon-subtle transition-colors relative">
+                            <span class="material-symbols-outlined">notifications</span>
+                            <span
+                                class="absolute top-2 right-2.5 w-2 h-2 bg-primary rounded-full border-2 border-white"></span>
+                        </button>
+                        <button
+                            class="p-2.5 bg-cream-accent/50 rounded-xl hover:bg-cream-accent text-maroon-subtle transition-colors">
+                            <span class="material-symbols-outlined">help</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <div class="p-6 lg:p-10 max-w-[1200px] mx-auto">
+                <!-- Profile Header Section -->
+                <div
+                    class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-[#e7cfd5] dark:border-gray-800 overflow-hidden mb-6 relative">
+                    <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-r from-primary/10 to-primary/5"></div>
+                    <div class="p-6 @container">
+                        <div class="flex flex-col @[520px]:flex-row gap-6 items-center @[520px]:items-start">
+                            <div class="relative">
+                                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl size-40 shadow-md"
+                                    data-alt="Professional profile photo of a woman in ethnic wear"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGkTDu4JuOv-8h5qOVkcS3GmdRKo1L4cd9sEjHUmd47oioGCo-kq9R2j1MXwHmNDFNArGGLzd-MGRBZH1bF8U-GYINwa3YU25qVd4KObNsvnYUucmyfSCnPpbgOwgIQ4spJSdGxl2wYsmcqY3c9m68h2haQ0YLfBkJNc46MpKLVZY-3v5fZuxFpvMMSpZJwW25Rf8LsR_MGgL7Hz9BOelioUEGCLp8fvHjjIrP1R00vnz00nU9OA_EiYOb3z-5bihMX9WfU4LFeg");'>
+                                </div>
+                                <div
+                                    class="absolute -bottom-2 -right-2 bg-green-500 text-white p-1 rounded-full border-4 border-white dark:border-gray-900 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-sm">verified</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-1 flex-col justify-center text-center @[520px]:text-left">
+                                <div class="flex flex-col @[720px]:flex-row @[720px]:items-center gap-2 mb-1">
+                                    <h1 class="text-[#1b0d11] dark:text-white text-3xl font-bold">Ananya Deshpande <span
+                                            class="text-gray-400 text-lg font-normal">(AD92837)</span></h1>
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 self-center @[520px]:self-start">
+                                        Verified Profile
+                                    </span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 text-lg">26 yrs, 5'6", Hindu: Marathi, Mumbai
+                                </p>
+                                <div
+                                    class="flex items-center justify-center @[520px]:justify-start gap-4 mt-2 text-sm text-[#9a4c5f] dark:text-primary/70">
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">schedule</span> Active 2 hours
+                                        ago</span>
+                                    <span class="flex items-center gap-1"><span
+                                            class="material-symbols-outlined text-base">location_on</span> Native:
+                                        Pune</span>
+                                </div>
+                                <div class="flex flex-wrap gap-3 mt-6 justify-center @[520px]:justify-start">
+                                    <button onclick="this.innerText='Interest Sent';this.classList.add('bg-green-600');"
+                                        class="flex items-center gap-2 px-8 py-3 bg-primary text-white rounded-xl font-bold hover:bg-[#d01040] transition-colors shadow-lg shadow-primary/20">
+                                        <span class="material-symbols-outlined">favorite</span> Send Interest
+                                    </button>
+                                    <button onclick="location.href='chat.html'"
+                                        class="flex items-center gap-2 px-8 py-3 bg-[#f3e7ea] dark:bg-gray-800 text-[#1b0d11] dark:text-white rounded-xl font-bold hover:bg-[#e7cfd5] transition-colors">
+                                        <span class="material-symbols-outlined">chat</span> Message
+                                    </button>
+                                    <button
+                                        class="p-3 border border-[#e7cfd5] dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800">
+                                        <span class="material-symbols-outlined">bookmark</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Profile Tabs -->
+                    <div class="border-t border-[#e7cfd5] dark:border-gray-800 px-6">
+                        <div class="flex gap-8 overflow-x-auto no-scrollbar" id="tabs-container">
+                            <button onclick="openTab(event, 'content-about')"
+                                class="tab-btn active flex flex-col items-center justify-center border-b-[3px] border-b-primary text-primary pb-3 pt-4 font-bold text-sm whitespace-nowrap transition-all">About
+                                Profile</button>
+                            <button onclick="openTab(event, 'content-family')"
+                                class="tab-btn flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-500 hover:text-primary hover:border-b-primary/50 pb-3 pt-4 font-bold text-sm whitespace-nowrap transition-all">Family
+                                Details</button>
+                            <button onclick="openTab(event, 'content-education')"
+                                class="tab-btn flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-500 hover:text-primary hover:border-b-primary/50 pb-3 pt-4 font-bold text-sm whitespace-nowrap transition-all">Education
+                                & Career</button>
+                            <button onclick="openTab(event, 'content-photos')"
+                                class="tab-btn flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-500 hover:text-primary hover:border-b-primary/50 pb-3 pt-4 font-bold text-sm whitespace-nowrap transition-all">Photos
+                                (5)</button>
+                            <button onclick="openTab(event, 'content-horoscope')"
+                                class="tab-btn flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-500 hover:text-primary hover:border-b-primary/50 pb-3 pt-4 font-bold text-sm whitespace-nowrap transition-all">Horoscope</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <!-- Left Column: Detailed Info -->
+                    <div class="lg:col-span-2 space-y-6 min-h-[500px]">
+
+                        <!-- Content: About (Default Active) -->
+                        <div id="content-about" class="tab-content space-y-6 animate-fade-in">
+                            <div
+                                class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-sm border border-[#e7cfd5] dark:border-gray-800">
+                                <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">person</span> About Me
+                                </h2>
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    I am a software engineer currently working in a top MNC in Mumbai. I would describe
+                                    myself as an
+                                    ambitious, independent yet family-oriented individual. I value honesty and a good
+                                    sense of
+                                    humor. In my free time, I enjoy classical dancing, hiking, and exploring new
+                                    cuisines. I'm
+                                    looking for a partner who is progressive but rooted in our cultural values.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    <span
+                                        class="px-3 py-1 bg-[#f3e7ea] dark:bg-gray-800 rounded-full text-xs font-semibold text-primary">Vegetarian</span>
+                                    <span
+                                        class="px-3 py-1 bg-[#f3e7ea] dark:bg-gray-800 rounded-full text-xs font-semibold text-primary">Non-Smoker</span>
+                                    <span
+                                        class="px-3 py-1 bg-[#f3e7ea] dark:bg-gray-800 rounded-full text-xs font-semibold text-primary">Yoga
+                                        Enthusiast</span>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-[#e7cfd5] dark:border-gray-800 overflow-hidden">
+                                <div class="p-6 border-b border-[#e7cfd5] dark:border-gray-800">
+                                    <h2 class="text-xl font-bold flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-primary">info</span> Personal
+                                        Information
+                                    </h2>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2">
+                                    <div
+                                        class="p-4 border-b md:border-r border-solid border-[#e7cfd5] dark:border-gray-800">
+                                        <p class="text-[#9a4c5f] text-xs font-medium uppercase tracking-wider mb-1">
+                                            Religion</p>
+                                        <p class="text-[#1b0d11] dark:text-white text-sm font-medium">Hindu</p>
+                                    </div>
+                                    <div class="p-4 border-b border-solid border-[#e7cfd5] dark:border-gray-800">
+                                        <p class="text-[#9a4c5f] text-xs font-medium uppercase tracking-wider mb-1">
+                                            Caste</p>
+                                        <p class="text-[#1b0d11] dark:text-white text-sm font-medium">Brahmin -
+                                            Deshastha</p>
+                                    </div>
+                                    <div
+                                        class="p-4 border-b md:border-r border-solid border-[#e7cfd5] dark:border-gray-800">
+                                        <p class="text-[#9a4c5f] text-xs font-medium uppercase tracking-wider mb-1">
+                                            Mother Tongue</p>
+                                        <p class="text-[#1b0d11] dark:text-white text-sm font-medium">Marathi</p>
+                                    </div>
+                                    <div class="p-4 border-b border-solid border-[#e7cfd5] dark:border-gray-800">
+                                        <p class="text-[#9a4c5f] text-xs font-medium uppercase tracking-wider mb-1">
+                                            Marital Status</p>
+                                        <p class="text-[#1b0d11] dark:text-white text-sm font-medium">Never Married</p>
+                                    </div>
+                                    <div
+                                        class="p-4 border-b md:border-r border-solid border-[#e7cfd5] dark:border-gray-800">
+                                        <p class="text-[#9a4c5f] text-xs font-medium uppercase tracking-wider mb-1">
+                                            Height & Weight</p>
+                                        <p class="text-[#1b0d11] dark:text-white text-sm font-medium">5' 6" | 55 kg</p>
+                                    </div>
+                                    <div class="p-4 border-b border-solid border-[#e7cfd5] dark:border-gray-800">
+                                        <p class="text-[#9a4c5f] text-xs font-medium uppercase tracking-wider mb-1">
+                                            Manglik</p>
+                                        <p class="text-[#1b0d11] dark:text-white text-sm font-medium">No</p>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 dark:bg-gray-800/50 p-4 flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary text-xl">lock</span>
+                                    <div>
+                                        <p class="text-xs font-bold text-gray-700 dark:text-gray-300">Privacy Policy</p>
+                                        <p class="text-xs text-gray-500">Contact details and sensitive bio-data are only
+                                            visible to accepted matches.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content: Family (Hidden) -->
+                        <div id="content-family" class="tab-content hidden animate-fade-in">
+                            <div
+                                class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-sm border border-[#e7cfd5] dark:border-gray-800">
+                                <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">groups</span> Family Details
+                                </h2>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="space-y-4">
+                                        <div>
+                                            <p class="text-[#9a4c5f] text-xs font-medium uppercase tracking-wider mb-1">
+                                                Family Type</p>
+                                            <p class="font-medium">Nuclear Family</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-[#9a4c5f] text-xs font-medium uppercase tracking-wider mb-1">
+                                                Father's Occupation</p>
+                                            <p class="font-medium">Retd. Army Officer</p>
+                                            <p class="text-xs text-gray-500 mt-0.5">Currently serving as a consultant in
+                                                a logistics firm.</p>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div>
+                                            <p class="text-[#9a4c5f] text-xs font-medium uppercase tracking-wider mb-1">
+                                                Family Values</p>
+                                            <p class="font-medium">Liberal</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-[#9a4c5f] text-xs font-medium uppercase tracking-wider mb-1">
+                                                Mother's Occupation</p>
+                                            <p class="font-medium">School Principal</p>
+                                            <p class="text-xs text-gray-500 mt-0.5">Works at a reputed international
+                                                school in Pune.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-6 pt-6 border-t border-[#e7cfd5] dark:border-gray-800">
+                                    <p class="text-[#9a4c5f] text-xs font-medium uppercase tracking-wider mb-2">Siblings
+                                    </p>
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-gray-400">face</span>
+                                        <div>
+                                            <p class="font-medium">1 Elder Brother (Married)</p>
+                                            <p class="text-xs text-gray-500">Software Architect, settled in USA.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content: Education (Hidden) -->
+                        <div id="content-education" class="tab-content hidden animate-fade-in">
+                            <div
+                                class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-sm border border-[#e7cfd5] dark:border-gray-800">
+                                <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">school</span> Education &
+                                    Career
+                                </h2>
+                                <div class="space-y-6">
+                                    <div class="flex gap-4">
+                                        <div
+                                            class="size-12 rounded-lg bg-[#f3e7ea] dark:bg-gray-800 flex items-center justify-center shrink-0 text-primary">
+                                            <span class="material-symbols-outlined">work</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-[#1b0d11] dark:text-white">Senior Software
+                                                Engineer</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">Microsoft India •
+                                                Full-time</p>
+                                            <p class="text-xs text-gray-500 mt-1">Working on cloud infrastructure
+                                                solutions. Passionate about coding and technology.</p>
+                                            <div
+                                                class="mt-3 inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-lg">
+                                                <span
+                                                    class="material-symbols-outlined text-sm text-gray-500">visibility_off</span>
+                                                <span class="text-xs font-medium text-gray-500">Annual Income Hidden
+                                                    (Request to View)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-4">
+                                        <div
+                                            class="size-12 rounded-lg bg-[#f3e7ea] dark:bg-gray-800 flex items-center justify-center shrink-0 text-primary">
+                                            <span class="material-symbols-outlined">auto_stories</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-[#1b0d11] dark:text-white">B.Tech in Computer
+                                                Science</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">Indian Institute of
+                                                Technology (IIT), Bombay</p>
+                                            <p class="text-xs text-gray-500 mt-1">Graduated with Honors. Active member
+                                                of the coding club.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content: Photos (Hidden) -->
+                        <div id="content-photos" class="tab-content hidden animate-fade-in">
+                            <div
+                                class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-sm border border-[#e7cfd5] dark:border-gray-800">
+                                <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">photo_library</span> Photos (5)
+                                </h2>
+                                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                    <div class="aspect-square rounded-lg bg-cover bg-center cursor-pointer hover:opacity-90 transition-opacity"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGkTDu4JuOv-8h5qOVkcS3GmdRKo1L4cd9sEjHUmd47oioGCo-kq9R2j1MXwHmNDFNArGGLzd-MGRBZH1bF8U-GYINwa3YU25qVd4KObNsvnYUucmyfSCnPpbgOwgIQ4spJSdGxl2wYsmcqY3c9m68h2haQ0YLfBkJNc46MpKLVZY-3v5fZuxFpvMMSpZJwW25Rf8LsR_MGgL7Hz9BOelioUEGCLp8fvHjjIrP1R00vnz00nU9OA_EiYOb3z-5bihMX9WfU4LFeg")'>
+                                    </div>
+                                    <div class="aspect-square rounded-lg bg-cover bg-center cursor-pointer hover:opacity-90 transition-opacity"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDtACoWxgAl95s_iLmoJEPSxlDbQke5cQXEPIXbyFbL5pFL0R3de0Ex6jj1n--dWX7cRuFKU1mxrqQJCtg_LoCj4cNcsRTJaF6BPfWGTFTY7gRKobV23lB3SdjoTuDGCerto1htc1AS1ADdzpsDzRtljQLqZVqbm3B3oWIOX0eN1TGgYKaOK9n0CrRXR6bXcopGKOgZA_3TwjlAGCjPs_Epf8wOJ4wlVfo2Z1gtGWEztRlIc7Fbawxj30e9-bGgfIJ0qFohCVQ4WA")'>
+                                    </div>
+                                    <div class="aspect-square rounded-lg bg-cover bg-center cursor-pointer hover:opacity-90 transition-opacity"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVjTCj5MFiOyRh4EyaXfP0x2TnHr6S5jORTxXral7udQQpOYi2t5EIv1lD-aolSInYD9zKJd-OSR2dF8fs7b4Wt6ScbvnyGMq6XoWjwiF6EXwNbkXQTn-SV_w5WlwytvYXEuAujQ66A0pnUo-NyXm8jOeVPy1-Bykj9Ya56kTYAnOxqOw_nAkGWT8J-idwwt3nUu30mNal1xX1zUghhb7_y-zsz0pWlv_827qE80uGlv136gYT9wYkjC20urUd1WKuTIdDEGihig")'>
+                                    </div>
+                                    <div class="aspect-square rounded-lg bg-cover bg-center cursor-pointer hover:opacity-90 transition-opacity"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwdvAbbpyf--h7FXvZagSahsAbLm7mMJa0O_p2JBlDSzFDuE-L28cc8lMnQRgmM3NlA-vYJ82_OdG5imVdbjuMx7c_57ZQLJbE7grVUUhe66FznU406vcKzxI890kPLLb1i8ccpcfHi9uGtphiXW11DHo-i1Hlya5qMw-LFI2DhbgNGyxp8PkBTefjxYfGzqjW2V1pJceJHNYDpkkAKQbzfkTodUhyIO0cUsLsbjNxQPhSSfnyNNSCDOfXxLRkUrIzTAA-sj-zXw")'>
+                                    </div>
+                                    <div
+                                        class="aspect-square rounded-lg bg-gray-100 flex items-center justify-center text-primary font-bold cursor-pointer hover:bg-gray-200 transition-colors">
+                                        +1 More
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content: Horoscope (Hidden) -->
+                        <div id="content-horoscope" class="tab-content hidden animate-fade-in">
+                            <div
+                                class="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-sm border border-[#e7cfd5] dark:border-gray-800">
+                                <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">auto_awesome</span> Horoscope
+                                    Details
+                                </h2>
+                                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                                    <div class="bg-cream-accent/30 p-4 rounded-xl text-center">
+                                        <p class="text-xs text-[#9a4c5f] uppercase tracking-wider font-bold">Rashi</p>
+                                        <p class="font-bold text-lg">Kumbh</p>
+                                        <p class="text-xs text-gray-500">(Aquarius)</p>
+                                    </div>
+                                    <div class="bg-cream-accent/30 p-4 rounded-xl text-center">
+                                        <p class="text-xs text-[#9a4c5f] uppercase tracking-wider font-bold">Nakshatra
+                                        </p>
+                                        <p class="font-bold text-lg">Shatabhisha</p>
+                                    </div>
+                                    <div class="bg-cream-accent/30 p-4 rounded-xl text-center">
+                                        <p class="text-xs text-[#9a4c5f] uppercase tracking-wider font-bold">Gan</p>
+                                        <p class="font-bold text-lg">Rakshas</p>
+                                    </div>
+                                    <div class="bg-cream-accent/30 p-4 rounded-xl text-center">
+                                        <p class="text-xs text-[#9a4c5f] uppercase tracking-wider font-bold">Nadi</p>
+                                        <p class="font-bold text-lg">Adya</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="mt-6 flex items-center justify-between text-sm text-gray-500 border-t border-[#e7cfd5] dark:border-gray-800 pt-4">
+                                    <span>Time of Birth: <strong>04:45 AM</strong></span>
+                                    <span>Place of Birth: <strong>Pune, India</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Right Column: Sidebar -->
+                    <div class="space-y-6">
+                        <!-- Trust & Safety Widget -->
+                        <div
+                            class="bg-[#f3e7ea]/50 dark:bg-gray-900 border-2 border-dashed border-[#e7cfd5] dark:border-gray-800 rounded-xl p-5">
+                            <div class="flex items-center gap-2 mb-3 text-primary">
+                                <span class="material-symbols-outlined">gpp_good</span>
+                                <h3 class="font-bold">Trust Score: 85%</h3>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Ananya has verified her ID and
+                                Education
+                                certificates.</p>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2 text-sm">
+                                    <span class="material-symbols-outlined text-green-500 text-sm">check_circle</span>
+                                    Mobile Verified
+                                </div>
+                                <div class="flex items-center gap-2 text-sm">
+                                    <span class="material-symbols-outlined text-green-500 text-sm">check_circle</span>
+                                    Govt ID Verified
+                                </div>
+                                <div class="flex items-center gap-2 text-sm">
+                                    <span class="material-symbols-outlined text-gray-400 text-sm">circle</span>
+                                    <span class="text-gray-400">LinkedIn Verified</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Similar Profiles -->
+                        <div
+                            class="bg-white dark:bg-gray-900 rounded-xl p-5 shadow-sm border border-[#e7cfd5] dark:border-gray-800">
+                            <h3 class="font-bold mb-4">Matches like her</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="size-12 rounded-lg bg-cover bg-center"
+                                        data-alt="Small thumbnail of a similar profile"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQsNVvMuEhTi_zgvayjbIBRGi8ikhJw122_I1AphSSTVHK0xUk_52Ursqfry5V99f-v_CazM9O7p0bT4Y-1a80juGUUg2Wf5ff4hhCzeuEFXNXkb5w7qwrDEgmBagi27HU0BImJjq1iNkQS--P53KF1WME0tn-0a4R_TlseLce95k8Lk6FfYoTwlGdHA7qbABXcM1YufQ9jGkvoX6GHdligHfj4jsgJktDpLEJRLk8x0aCxO4OYyZMUPxnYiidIy680hN15S1oTg");'>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold">Priya S.</p>
+                                        <p class="text-xs text-gray-500">25 yrs, 5'4" • Pune</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="size-12 rounded-lg bg-cover bg-center"
+                                        data-alt="Small thumbnail of a similar profile"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD4aZIbTzPXA9fqbgnFVNvva3SrM4lOiW88UCEvmISNiJoPsfuYtH--wyJzpZ9gGX-xLs4j88wwJ5L41oSmtdDWtv8Yp-28bwsmlWrecG5nkj_4SER3eFHjg6hHu6hIA4HF_k7xswCcpx-gnLDC_YMf2joC04slHzvsAMQ818URNvUKlEEBVqoDfZcdQVREKzt4pTSAyHVlzSwj4Mhq07kGWxS-zzliYxG-FdaZ86H9Wen4fsWxyAWqpxfjlu7oNJoF9eDEWhEJKw");'>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold">Riya K.</p>
+                                        <p class="text-xs text-gray-500">27 yrs, 5'5" • Mumbai</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer
+                    class="mt-12 py-10 border-t border-[#e7cfd5] dark:border-gray-800 bg-white dark:bg-background-dark px-4">
+                    <div class="max-w-[1200px] mx-auto text-center pl-10">
+                        <div class="flex items-center justify-center gap-2 text-primary mb-4">
+                            <span class="material-symbols-outlined">health_and_safety</span>
+                            <span class="font-bold">Safe Matrimony Tips</span>
+                        </div>
+                        <p class="text-sm text-gray-500 max-w-2xl mx-auto mb-6">
+                            Never share your financial details or transfer money to anyone. Report suspicious profiles
+                            to our
+                            safety
+                            team immediately. All profiles are manually screened but users are advised to perform their
+                            own
+                            background checks.
+                        </p>
+                        <p class="text-xs text-gray-400">© 2024 EternalVows Matrimony Services. All Rights Reserved.</p>
+                    </div>
+                </footer>
+        </main>
+    </div>
+
+    <script>
+        function openTab(evt, tabId) {
+            // Hide all tab contents
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.add("hidden");
+            }
+
+            // Remove 'active' class from all tab buttons
+            const tabButtons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("border-b-primary", "text-primary");
+                tabButtons[i].classList.add("border-b-transparent", "text-gray-500");
+            }
+
+            // Show the specific tab content
+            document.getElementById(tabId).classList.remove("hidden");
+
+            // Add active class to the button that opened the tab
+            evt.currentTarget.classList.remove("border-b-transparent", "text-gray-500");
+            evt.currentTarget.classList.add("border-b-primary", "text-primary");
+        }
+    </script>
+</body>
+
+</html>

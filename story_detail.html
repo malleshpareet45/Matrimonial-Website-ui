@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Siddharth & Anjali's Story | EternalVows</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#800020",
+                        "accent-gold": "#D4AF37",
+                        "background-light": "#fcf8f9",
+                        "background-dark": "#1b0d11",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#1b0d11] dark:text-[#fcf8f9]">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+        <!-- Navigation -->
+        <header
+            class="sticky top-0 z-50 w-full border-b border-primary/10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-20 lg:px-40 py-4">
+            <div class="flex items-center justify-between whitespace-nowrap">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary">
+                        <span class="material-symbols-outlined"
+                            style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    </div>
+                    <h2 class="text-primary text-2xl font-black leading-tight tracking-tight serif-font">EternalVows
+                    </h2>
+                </div>
+                <nav class="hidden md:flex flex-1 justify-center gap-10">
+                    <a href="index.html" class="text-sm font-semibold hover:text-primary transition-colors">Home</a>
+                    <a href="success_stories.html"
+                        class="text-sm font-semibold text-primary border-b-2 border-primary">Success Stories</a>
+                    <a href="help.html" class="text-sm font-semibold hover:text-primary transition-colors">Help</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button onclick="location.href='login.html'"
+                        class="hidden sm:flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold shadow-md hover:bg-primary/90 transition-all">Login</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-1">
+            <!-- Hero Section -->
+            <div class="relative h-[60vh] w-full overflow-hidden">
+                <div class="absolute inset-0 bg-cover bg-center"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwdvAbbpyf--h7FXvZagSahsAbLm7mMJa0O_p2JBlDSzFDuE-L28cc8lMnQRgmM3NlA-vYJ82_OdG5imVdbjuMx7c_57ZQLJbE7grVUUhe66FznU406vcKzxI890kPLLb1i8ccpcfHi9uGtphiXW11DHo-i1Hlya5qMw-LFI2DhbgNGyxp8PkBTefjxYfGzqjW2V1pJceJHNYDpkkAKQbzfkTodUhyIO0cUsLsbjNxQPhSSfnyNNSCDOfXxLRkUrIzTAA-sj-zXw");'>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+                <div
+                    class="absolute bottom-0 left-0 w-full p-8 md:p-20 text-white flex flex-col items-start gap-4 animate-fade-in-up">
+                    <a href="success_stories.html"
+                        class="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-accent-gold hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-lg">arrow_back</span> Back to Stories
+                    </a>
+                    <h1 class="text-5xl md:text-7xl font-black serif-font leading-tight">Siddharth & Anjali</h1>
+                    <p class="text-xl opacity-90 font-light max-w-2xl">"From our first conversation to our wedding day,
+                        every moment felt destined."</p>
+                    <div class="flex items-center gap-6 mt-4 opacity-80 text-sm font-bold uppercase tracking-wider">
+                        <span class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-accent-gold">event_available</span> Met Dec
+                            2023</span>
+                        <span class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-accent-gold">church</span> Married Nov 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story Content -->
+            <div class="px-6 md:px-20 lg:px-40 py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 text-lg leading-relaxed">
+                <!-- Left Content -->
+                <div class="lg:col-span-8 flex flex-col gap-10">
+                    <div>
+                        <h2 class="text-3xl font-bold serif-font text-primary mb-6">How We Met</h2>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            "I had almost given up on finding someone who truly understood my balance of career ambition
+                            and family values," Siddharth recalls. "When I saw Anjali's profile on EternalUnion, what
+                            struck me wasn't just her photo, but her description of her ideal weekend—spending time with
+                            grandparents and reading history books. It mirrored my own life so perfectly."
+                        </p>
+                        <p class="mt-4 text-gray-600 dark:text-gray-300">
+                            Anjali adds, "I received his interest request on a Tuesday evening. His profile was
+                            detailed, respectful, and honest. We started chatting the next day, and within a week, we
+                            knew we had to meet."
+                        </p>
+                    </div>
+
+                    <div class="bg-primary/5 p-8 rounded-2xl border-l-4 border-primary">
+                        <h3 class="text-xl font-bold serif-font text-primary mb-2">The First Meeting</h3>
+                        <p class="italic text-gray-700 dark:text-gray-300">"We met at a small coffee shop in South
+                            Bombay. A quick 30-minute meeting turned into a 4-hour conversation about everything from
+                            our favorite childhood memories to our future aspirations. It felt like reuniting with an
+                            old friend."</p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-3xl font-bold serif-font text-primary mb-6">The Journey to 'Yes'</h2>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Over the next six months, their families met and bonded instantly. "The compatibility scores
+                            on EternalUnion were spot on," Siddharth laughs. "Our families shared the same cultural
+                            background and values, which made the union seamless."
+                        </p>
+                        <p class="mt-4 text-gray-600 dark:text-gray-300">
+                            Siddharth proposed during a sunset walk on Marine Drive, the same place they had their
+                            second date. "It was simple, private, and perfect," says Anjali.
+                        </p>
+                    </div>
+
+                    <!-- Gallery Grid -->
+                    <div class="grid grid-cols-2 gap-4 mt-6">
+                        <div class="h-64 rounded-xl bg-cover bg-center"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDtACoWxgAl95s_iLmoJEPSxlDbQke5cQXEPIXbyFbL5pFL0R3de0Ex6jj1n--dWX7cRuFKU1mxrqQJCtg_LoCj4cNcsRTJaF6BPfWGTFTY7gRKobV23lB3SdjoTuDGCerto1htc1AS1ADdzpsDzRtljQLqZVqbm3B3oWIOX0eN1TGgYKaOK9n0CrRXR6bXcopGKOgZA_3TwjlAGCjPs_Epf8wOJ4wlVfo2Z1gtGWEztRlIc7Fbawxj30e9-bGgfIJ0qFohCVQ4WA");'>
+                        </div>
+                        <div class="h-64 rounded-xl bg-cover bg-center"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVjTCj5MFiOyRh4EyaXfP0x2TnHr6S5jORTxXral7udQQpOYi2t5EIv1lD-aolSInYD9zKJd-OSR2dF8fs7b4Wt6ScbvnyGMq6XoWjwiF6EXwNbkXQTn-SV_w5WlwytvYXEuAujQ66A0pnUo-NyXm8jOeVPy1-Bykj9Ya56kTYAnOxqOw_nAkGWT8J-idwwt3nUu30mNal1xX1zUghhb7_y-zsz0pWlv_827qE80uGlv136gYT9wYkjC20urUd1WKuTIdDEGihig");'>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Sidebar details -->
+                <div class="lg:col-span-4 space-y-8">
+                    <div
+                        class="bg-white dark:bg-zinc-900 p-8 rounded-2xl shadow-lg border border-primary/10 sticky top-24">
+                        <h3
+                            class="text-xl font-bold uppercase tracking-widest text-primary mb-6 border-b border-gray-100 pb-4">
+                            Couple Details</h3>
+
+                        <div class="space-y-6 text-sm">
+                            <div>
+                                <p class="text-gray-500 uppercase text-xs font-bold mb-1">Groom</p>
+                                <p class="font-bold text-lg">Siddharth Verma</p>
+                                <p class="text-gray-600">30, Software Architect</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 uppercase text-xs font-bold mb-1">Bride</p>
+                                <p class="font-bold text-lg">Anjali Gupta</p>
+                                <p class="text-gray-600">28, Chartered Accountant</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 uppercase text-xs font-bold mb-1">Location</p>
+                                <p class="font-bold text-lg">Mumbai, India</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-gray-100">
+                            <p class="text-center text-xs font-bold uppercase tracking-widest text-accent-gold mb-4">
+                                Start your own story</p>
+                            <button onclick="location.href='register_step1.html'"
+                                class="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2">
+                                Register Free
+                                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Stories CTA -->
+            <section class="bg-background-light py-20 px-6 text-center">
+                <h3 class="text-3xl font-bold serif-font text-primary mb-8">Read More Happy Endings</h3>
+                <div class="flex justify-center gap-4">
+                    <button onclick="location.href='success_stories.html'"
+                        class="px-8 py-3 bg-white border border-gray-200 rounded-xl font-bold hover:border-primary hover:text-primary transition-colors">Previous
+                        Story</button>
+                    <button onclick="location.href='success_stories.html'"
+                        class="px-8 py-3 bg-white border border-gray-200 rounded-xl font-bold hover:border-primary hover:text-primary transition-colors">Next
+                        Story</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-white dark:bg-[#12080a] py-12 text-center text-sm opacity-60 border-t border-primary/10">
+            <p>© 2024 EternalVows Matrimonial Services. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

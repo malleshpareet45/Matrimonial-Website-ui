@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>EternalUnion | Find Your Perfect Match</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Playfair+Display:wght@700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#800020", // Deep Maroon/Burgundy
+                        "accent-gold": "#D4AF37",
+                        "background-light": "#fcf8f9",
+                        "background-dark": "#1b0d11",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-[#1b0d11] dark:text-[#fcf8f9] transition-colors duration-300">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+        <!-- Navigation Bar -->
+        <header
+            class="sticky top-0 z-50 w-full border-b border-solid border-primary/10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-20 lg:px-40 py-4">
+            <div class="flex items-center justify-between whitespace-nowrap">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary">
+                        <span class="material-symbols-outlined"
+                            style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    </div>
+                    <h2 class="text-primary text-2xl font-black leading-tight tracking-tight serif-font">
+                        EternalVows</h2>
+                </div>
+                <nav class="hidden md:flex flex-1 justify-center gap-10">
+                    <a href="index.html" class="text-sm font-semibold text-primary border-b-2 border-primary">Home</a>
+
+                    <a href="success_stories.html"
+                        class="text-sm font-semibold hover:text-primary transition-colors">Success Stories</a>
+                    <a href="help.html" class="text-sm font-semibold hover:text-primary transition-colors">Help</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button onclick="location.href='login.html'"
+                        class="hidden sm:flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold shadow-md hover:bg-primary/90 transition-all">
+                        Login
+                    </button>
+                    <button onclick="location.href='login.html'"
+                        class="hidden sm:flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold shadow-md hover:bg-primary/90 transition-all">
+                        Sign Up
+                    </button>
+
+                </div>
+            </div>
+        </header>
+        <!-- Hero Section -->
+        <main class="flex-1">
+            <div class="relative w-full px-6 md:px-20 lg:px-40 py-12 @container">
+                <div class="flex flex-col gap-10 lg:flex-row lg:items-center">
+                    <!-- Left Side: Emotive Hero Image -->
+                    <div class="relative w-full lg:w-3/5">
+                        <div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl shadow-2xl border-4 border-white dark:border-primary/20"
+                            data-alt="Happy Indian couple in traditional wedding attire"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCF_Hp6cYdmRgkjWxiqfLLEpGSNrxEXmhYBs2JTlMmUgtz022uJUqSZ2h2SyWSktWNcm23rJ--7kMR8rIIgJvif0e2DWBN_eD5LGbNJyd9HeBIo7UoOQq3G0N0ojpyoAosAT5xoo-MkHibZ-kcORSQClf7unKCp7KS7exs_Nk6EGx0PYiKQECdkJV5gHVgNrJPtpzjly7gKyW7nKuDRZNZIpJHxO3Fw2TI5Bybmdo5EprkZSEdx6TpY7edhLkP9HNOAWB6hJeWWMw");'>
+                        </div>
+                        <!-- Floating Badge -->
+                        <div
+                            class="absolute -bottom-6 -right-6 hidden md:flex flex-col items-center justify-center bg-accent-gold text-primary p-4 rounded-xl shadow-xl border-2 border-white">
+                            <span class="text-3xl font-bold serif-font">10k+</span>
+                            <span class="text-[10px] uppercase tracking-widest font-black">Success Stories</span>
+                        </div>
+                    </div>
+                    <!-- Right Side: Quick Signup Form -->
+                    <div class="flex flex-col gap-8 lg:w-2/5">
+                        <div class="flex flex-col gap-4 items-center lg:items-start">
+                            <h1
+                                class="text-primary dark:text-accent-gold text-4xl font-black leading-tight @[480px]:text-6xl tracking-tight text-center lg:text-left">
+                                Begin Your <br class="lg:hidden" /> Beautiful&nbsp;Journey
+                            </h1>
+                            <p
+                                class="text-base font-normal opacity-80 leading-relaxed max-w-md text-center lg:text-left">
+                                The most trusted matrimonial site for Indian families worldwide. Where tradition meets
+                                modern matchmaking.
+                            </p>
+                        </div>
+                        <!-- Form Card -->
+                        <div
+                            class="bg-white dark:bg-[#2a161b] p-8 rounded-xl shadow-2xl border border-primary/5 flex flex-col gap-6">
+                            <div class="grid grid-cols-2 gap-4">
+                                <label class="flex flex-col gap-2">
+                                    <span class="text-xs font-bold uppercase tracking-wider opacity-60">Profile
+                                        For</span>
+                                    <select
+                                        class="form-input rounded-lg border-primary/10 bg-background-light dark:bg-background-dark/50 text-sm focus:ring-primary focus:border-primary">
+                                        <option>Self</option>
+                                        <option>Son</option>
+                                        <option>Daughter</option>
+                                        <option>Sibling</option>
+                                    </select>
+                                </label>
+                                <label class="flex flex-col gap-2">
+                                    <span class="text-xs font-bold uppercase tracking-wider opacity-60">Gender</span>
+                                    <select
+                                        class="form-input rounded-lg border-primary/10 bg-background-light dark:bg-background-dark/50 text-sm focus:ring-primary focus:border-primary">
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <label class="flex flex-col gap-2">
+                                    <span class="text-xs font-bold uppercase tracking-wider opacity-60">Religion</span>
+                                    <select
+                                        class="form-input rounded-lg border-primary/10 bg-background-light dark:bg-background-dark/50 text-sm focus:ring-primary focus:border-primary">
+                                        <option>Hindu</option>
+                                        <option>Muslim</option>
+                                        <option>Sikh</option>
+                                        <option>Christian</option>
+                                        <option>Jain</option>
+                                    </select>
+                                </label>
+                                <label class="flex flex-col gap-2">
+                                    <span class="text-xs font-bold uppercase tracking-wider opacity-60">Mother
+                                        Tongue</span>
+                                    <select
+                                        class="form-input rounded-lg border-primary/10 bg-background-light dark:bg-background-dark/50 text-sm focus:ring-primary focus:border-primary">
+                                        <option>Hindi</option>
+                                        <option>Punjabi</option>
+                                        <option>Bengali</option>
+                                        <option>Gujarati</option>
+                                        <option>Tamil</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <button onclick="location.href='register_step1.html'"
+                                class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-lg flex items-center justify-center gap-2 transition-transform active:scale-[0.98]">
+                                <span class="material-symbols-outlined">search</span>
+                                Let's Find Matches
+                            </button>
+                            <p class="text-center text-[11px] opacity-50">By joining, you agree to our Terms &amp;
+                                Privacy Policy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Stats Ribbon -->
+            <div class="w-full bg-white dark:bg-[#12080a] py-16 px-6 md:px-20 lg:px-40">
+                <div class="flex flex-wrap justify-between gap-8 text-center md:text-left">
+                    <div
+                        class="flex flex-1 min-w-[200px] flex-col gap-3 p-8 rounded-xl border-l-4 border-accent-gold bg-background-light dark:bg-background-dark shadow-sm">
+                        <div class="text-primary dark:text-accent-gold mb-1">
+                            <span class="material-symbols-outlined text-4xl">verified_user</span>
+                        </div>
+                        <p class="text-2xl font-black serif-font">1M+ Profiles</p>
+                        <p class="text-sm font-medium opacity-60 uppercase tracking-widest">Verified Members</p>
+                    </div>
+                    <div
+                        class="flex flex-1 min-w-[200px] flex-col gap-3 p-8 rounded-xl border-l-4 border-accent-gold bg-background-light dark:bg-background-dark shadow-sm">
+                        <div class="text-primary dark:text-accent-gold mb-1">
+                            <span class="material-symbols-outlined text-4xl">calendar_today</span>
+                        </div>
+                        <p class="text-2xl font-black serif-font">20+ Years</p>
+                        <p class="text-sm font-medium opacity-60 uppercase tracking-widest">Legacy of Trust</p>
+                    </div>
+                    <div
+                        class="flex flex-1 min-w-[200px] flex-col gap-3 p-8 rounded-xl border-l-4 border-accent-gold bg-background-light dark:bg-background-dark shadow-sm">
+                        <div class="text-primary dark:text-accent-gold mb-1">
+                            <span class="material-symbols-outlined text-4xl">volunteer_activism</span>
+                        </div>
+                        <p class="text-2xl font-black serif-font">500k+</p>
+                        <p class="text-sm font-medium opacity-60 uppercase tracking-widest">Success Stories</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Success Stories Section -->
+            <section class="px-6 md:px-20 lg:px-40 py-20 bg-background-light dark:bg-background-dark">
+                <div class="flex flex-col items-center gap-4 mb-12 text-center">
+                    <h2 class="text-4xl font-black serif-font text-primary dark:text-accent-gold">Heartwarming Success
+                        Stories</h2>
+                    <div class="h-1 w-20 bg-accent-gold rounded-full"></div>
+                    <p class="max-w-xl text-sm opacity-70">Real people, real connections. Read how thousands found their
+                        forever partner through EternalUnion.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Story Card 1 -->
+                    <div
+                        class="group flex flex-col bg-white dark:bg-[#2a161b] rounded-xl shadow-lg overflow-hidden border border-primary/5 hover:shadow-2xl transition-all duration-300">
+                        <div class="h-64 w-full bg-center bg-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                            data-alt="Couple at outdoor engagement ceremony"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDtACoWxgAl95s_iLmoJEPSxlDbQke5cQXEPIXbyFbL5pFL0R3de0Ex6jj1n--dWX7cRuFKU1mxrqQJCtg_LoCj4cNcsRTJaF6BPfWGTFTY7gRKobV23lB3SdjoTuDGCerto1htc1AS1ADdzpsDzRtljQLqZVqbm3B3oWIOX0eN1TGgYKaOK9n0CrRXR6bXcopGKOgZA_3TwjlAGCjPs_Epf8wOJ4wlVfo2Z1gtGWEztRlIc7Fbawxj30e9-bGgfIJ0qFohCVQ4WA");'>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <p class="text-lg font-bold serif-font">Aarav &amp; Ishani</p>
+                                <span
+                                    class="bg-accent-gold/20 text-accent-gold text-[10px] px-2 py-1 rounded font-bold uppercase">Wedding
+                                    2023</span>
+                            </div>
+                            <p class="text-sm leading-relaxed opacity-70 italic">"We never thought finding a soulmate
+                                could be this simple. The community filters helped us find shared values effortlessly."
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Story Card 2 -->
+                    <div
+                        class="group flex flex-col bg-white dark:bg-[#2a161b] rounded-xl shadow-lg overflow-hidden border border-primary/5 hover:shadow-2xl transition-all duration-300">
+                        <div class="h-64 w-full bg-center bg-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                            data-alt="Couple laughing in traditional attire"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVjTCj5MFiOyRh4EyaXfP0x2TnHr6S5jORTxXral7udQQpOYi2t5EIv1lD-aolSInYD9zKJd-OSR2dF8fs7b4Wt6ScbvnyGMq6XoWjwiF6EXwNbkXQTn-SV_w5WlwytvYXEuAujQ66A0pnUo-NyXm8jOeVPy1-Bykj9Ya56kTYAnOxqOw_nAkGWT8J-idwwt3nUu30mNal1xX1zUghhb7_y-zsz0pWlv_827qE80uGlv136gYT9wYkjC20urUd1WKuTIdDEGihig");'>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <p class="text-lg font-bold serif-font">Rohan &amp; Meera</p>
+                                <span
+                                    class="bg-accent-gold/20 text-accent-gold text-[10px] px-2 py-1 rounded font-bold uppercase">Met
+                                    in 2022</span>
+                            </div>
+                            <p class="text-sm leading-relaxed opacity-70 italic">"EternalUnion wasn't just a website; it
+                                was a bridge to our families meeting and starting a new chapter together."</p>
+                        </div>
+                    </div>
+                    <!-- Story Card 3 -->
+                    <div
+                        class="group flex flex-col bg-white dark:bg-[#2a161b] rounded-xl shadow-lg overflow-hidden border border-primary/5 hover:shadow-2xl transition-all duration-300">
+                        <div class="h-64 w-full bg-center bg-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                            data-alt="Indian couple holding hands"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwdvAbbpyf--h7FXvZagSahsAbLm7mMJa0O_p2JBlDSzFDuE-L28cc8lMnQRgmM3NlA-vYJ82_OdG5imVdbjuMx7c_57ZQLJbE7grVUUhe66FznU406vcKzxI890kPLLb1i8ccpcfHi9uGtphiXW11DHo-i1Hlya5qMw-LFI2DhbgNGyxp8PkBTefjxYfGzqjW2V1pJceJHNYDpkkAKQbzfkTodUhyIO0cUsLsbjNxQPhSSfnyNNSCDOfXxLRkUrIzTAA-sj-zXw");'>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <p class="text-lg font-bold serif-font">Siddharth &amp; Anjali</p>
+                                <span
+                                    class="bg-accent-gold/20 text-accent-gold text-[10px] px-2 py-1 rounded font-bold uppercase">Engaged
+                                    2024</span>
+                            </div>
+                            <p class="text-sm leading-relaxed opacity-70 italic">"The privacy controls gave me the
+                                confidence to explore matches safely. Highly recommend for serious seekers."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 text-center">
+                    <button
+                        class="px-8 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold rounded-lg transition-all">
+                        View More Stories
+                    </button>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-white dark:bg-[#12080a] py-20 px-6 md:px-20 lg:px-40 border-t border-primary/10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">favorite</span>
+                        <h2 class="text-xl font-bold serif-font">EternalUnion</h2>
+                    </div>
+                    <p class="text-sm opacity-60 leading-relaxed">Connecting souls and uniting families for over two
+                        decades. Your trust is our legacy.</p>
+                    <div class="flex gap-4">
+                        <a class="size-8 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">social_leaderboard</span>
+                        </a>
+                        <a class="size-8 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">share</span>
+                        </a>
+                        <a class="size-8 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">mail</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-primary dark:text-accent-gold uppercase tracking-widest text-xs">
+                        Explore</h4>
+                    <ul class="flex flex-col gap-4 text-sm opacity-70">
+                        <li><a class="hover:text-primary transition-colors" href="#">Search Profiles</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Success Stories</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Matrimonial Blogs</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Featured Members</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-primary dark:text-accent-gold uppercase tracking-widest text-xs">
+                        Support</h4>
+                    <ul class="flex flex-col gap-4 text-sm opacity-70">
+                        <li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Safety Tips</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Premium Plans</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-primary dark:text-accent-gold uppercase tracking-widest text-xs">
+                        Download App</h4>
+                    <p class="text-sm opacity-60 mb-6 leading-relaxed">Get the mobile app and stay connected on the go.
+                    </p>
+                    <div class="flex flex-col gap-3">
+                        <div
+                            class="flex items-center gap-3 p-3 border border-primary/20 rounded-lg cursor-pointer hover:bg-primary/5 transition-all">
+                            <span class="material-symbols-outlined text-primary text-2xl">smartphone</span>
+                            <div>
+                                <p class="text-[10px] uppercase font-bold opacity-50">Available on</p>
+                                <p class="text-sm font-bold">App Store</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-3 p-3 border border-primary/20 rounded-lg cursor-pointer hover:bg-primary/5 transition-all">
+                            <span class="material-symbols-outlined text-primary text-2xl">shop_two</span>
+                            <div>
+                                <p class="text-[10px] uppercase font-bold opacity-50">Available on</p>
+                                <p class="text-sm font-bold">Play Store</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="mt-20 pt-8 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] opacity-40 font-medium uppercase tracking-widest">
+                <p>© 2024 EternalVows Matrimonial Services. All rights reserved.</p>
+                <div class="flex gap-8">
+                    <a class="hover:text-primary" href="#">Privacy Policy</a>
+                    <a class="hover:text-primary" href="#">Terms of Use</a>
+                    <a class="hover:text-primary" href="#">Cookie Policy</a>
+                    <a class="hover:text-primary" href="admin_dashboard.html">Admin</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>User Login | EternalVows Matrimony</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#800020",
+                        "gold-accent": "#D4AF37",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221015",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-white dark:bg-background-dark font-display text-[#1b0d11] transition-colors duration-300">
+    <div class="flex min-h-screen w-full">
+        <!-- Left Side: Brand Visuals (Hidden on mobile, visible on lg) -->
+        <div class="hidden lg:flex w-1/2 bg-primary relative overflow-hidden flex-col justify-between p-16 text-white">
+            <!-- Background Pattern/Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent pointer-events-none"></div>
+            <div class="absolute inset-0 opacity-10"
+                style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 30px 30px;">
+            </div>
+
+            <!-- Logo Area -->
+            <div class="relative z-10">
+                <div class="size-16 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center mb-8">
+                    <span class="material-symbols-outlined text-4xl">favorite</span>
+                </div>
+            </div>
+
+            <!-- Main Text Content -->
+            <div class="relative z-10 max-w-lg">
+                <h1 class="text-5xl font-black serif-font mb-6 leading-tight">Welcome to EternalVows</h1>
+                <p class="text-xl font-medium opacity-90 leading-relaxed italic mb-8">
+                    "Find your perfect match where tradition meets modern compatibility. Your journey to forever begins
+                    here."
+                </p>
+                <div class="flex gap-12 pt-8 border-t border-white/20">
+                    <div>
+                        <p class="text-3xl font-bold mb-1">1M+</p>
+                        <p class="text-xs uppercase tracking-widest opacity-75">Active Users</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold mb-1">98%</p>
+                        <p class="text-xs uppercase tracking-widest opacity-75">Success Rate</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer area for left side -->
+            <div class="relative z-10 text-xs opacity-50">
+                © 2024 EternalVows Matrimony. All rights reserved.
+            </div>
+        </div>
+
+        <!-- Right Side: Login Form -->
+        <div class="w-full lg:w-1/2 flex items-center justify-center p-6 bg-background-light dark:bg-background-dark">
+            <div class="w-full max-w-[480px]">
+                <!-- Mobile Logo (Visible only on small screens) -->
+                <div class="flex lg:hidden items-center gap-3 mb-8 justify-center text-primary">
+                    <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-2xl"
+                            style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    </div>
+                    <h2 class="text-2xl font-black serif-font">EternalVows</h2>
+                </div>
+
+                <!-- Card Container -->
+                <div
+                    class="bg-white dark:bg-[#2d161d] rounded-2xl shadow-xl border border-gray-100 dark:border-white/5 overflow-hidden transition-all duration-300">
+
+                    <!-- REGISTER CARD CONTENT -->
+                    <div id="register-card" class="hidden px-8 pt-10 pb-12">
+                        <!-- Header Inside Card -->
+                        <div class="text-center mb-8">
+                            <!-- Icon above title like reference image -->
+                            <div
+                                class="size-12 rounded-xl bg-primary/5 text-primary flex items-center justify-center mx-auto mb-4">
+                                <span class="material-symbols-outlined text-2xl">person_add</span>
+                            </div>
+
+                            <h1 class="text-[#1b0d11] dark:text-white text-2xl font-bold tracking-tight mb-2">
+                                Create your profile</h1>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">Join over 1 Million members finding
+                                love.</p>
+                        </div>
+
+                        <!-- Registration Form -->
+                        <form class="space-y-5">
+                            <!-- Email Field -->
+                            <div class="flex flex-col gap-2">
+                                <label class="text-[#1b0d11] dark:text-gray-200 text-sm font-bold">Email Address</label>
+                                <div class="relative group">
+                                    <input
+                                        class="w-full rounded-xl border border-gray-200 dark:border-[#4d2f36] bg-gray-50 dark:bg-[#381c24] h-12 px-4 pl-11 text-[#1b0d11] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all placeholder:text-gray-400"
+                                        placeholder="name@example.com" type="email" />
+                                    <span
+                                        class="material-symbols-outlined absolute left-4 top-3.5 text-gray-400 text-[20px]">mail</span>
+                                </div>
+                            </div>
+
+                            <!-- Password Field -->
+                            <div class="flex flex-col gap-2">
+                                <label class="text-[#1b0d11] dark:text-gray-200 text-sm font-bold">Create
+                                    Password</label>
+                                <div
+                                    class="relative w-full rounded-xl border border-gray-200 dark:border-[#4d2f36] bg-gray-50 dark:bg-[#381c24] overflow-hidden focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all">
+                                    <input
+                                        class="w-full border-0 bg-transparent h-12 px-4 pl-11 text-[#1b0d11] dark:text-white focus:ring-0 placeholder:text-gray-400"
+                                        placeholder="Min. 8 characters" type="password" />
+                                    <span
+                                        class="material-symbols-outlined absolute left-4 top-3.5 text-gray-400 text-[20px]">lock</span>
+                                    <button
+                                        class="absolute right-0 top-0 h-12 px-4 text-gray-400 hover:text-primary transition-colors flex items-center justify-center"
+                                        type="button">
+                                        <span class="material-symbols-outlined text-[20px]">visibility_off</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="button" onclick="location.href='register_step1.html'"
+                                class="w-full bg-primary hover:bg-[#d01141] text-white font-bold py-3.5 rounded-xl shadow-lg shadow-primary/20 transition-all transform active:scale-[0.98] mt-2">
+                                Create Profile
+                            </button>
+                        </form>
+
+                        <!-- Card Footer -->
+                        <div class="mt-8 text-center">
+                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                Already have an account? <button onclick="toggleAuth('login')"
+                                    class="text-primary font-bold hover:underline">Sign In</button>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- LOGIN CARD CONTENT (Hidden by default) -->
+                    <div id="login-card" class="px-8 pt-10 pb-12">
+                        <!-- Header Inside Card -->
+                        <div class="text-center mb-8">
+                            <!-- Icon above title like reference image -->
+                            <div
+                                class="size-12 rounded-xl bg-primary/5 text-primary flex items-center justify-center mx-auto mb-4">
+                                <span class="material-symbols-outlined text-2xl">lock</span>
+                            </div>
+
+                            <h1 class="text-[#1b0d11] dark:text-white text-2xl font-bold tracking-tight mb-2">
+                                Sign in to your account</h1>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">Welcome back! Please enter your details.
+                            </p>
+                        </div>
+
+                        <!-- Login Form -->
+                        <form class="space-y-5">
+                            <!-- Email Field -->
+                            <div class="flex flex-col gap-2">
+                                <label class="text-[#1b0d11] dark:text-gray-200 text-sm font-bold">Email Address</label>
+                                <div class="relative group">
+                                    <input
+                                        class="w-full rounded-xl border border-gray-200 dark:border-[#4d2f36] bg-gray-50 dark:bg-[#381c24] h-12 px-4 pl-11 text-[#1b0d11] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all placeholder:text-gray-400"
+                                        placeholder="name@example.com" type="email" />
+                                    <span
+                                        class="material-symbols-outlined absolute left-4 top-3.5 text-gray-400 text-[20px]">mail</span>
+                                </div>
+                            </div>
+
+                            <!-- Password Field -->
+                            <div class="flex flex-col gap-2">
+                                <div class="flex justify-between items-center">
+                                    <label class="text-[#1b0d11] dark:text-gray-200 text-sm font-bold">Password</label>
+                                    <a href="#" onclick="alert('Password reset link sent.'); return false;"
+                                        class="text-primary text-xs font-bold hover:underline">Forgot password?</a>
+                                </div>
+                                <div
+                                    class="relative w-full rounded-xl border border-gray-200 dark:border-[#4d2f36] bg-gray-50 dark:bg-[#381c24] overflow-hidden focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all">
+                                    <input
+                                        class="w-full border-0 bg-transparent h-12 px-4 pl-11 text-[#1b0d11] dark:text-white focus:ring-0 placeholder:text-gray-400"
+                                        placeholder="Enter your password" type="password" />
+                                    <span
+                                        class="material-symbols-outlined absolute left-4 top-3.5 text-gray-400 text-[20px]">lock</span>
+                                    <button
+                                        class="absolute right-0 top-0 h-12 px-4 text-gray-400 hover:text-primary transition-colors flex items-center justify-center"
+                                        type="button">
+                                        <span class="material-symbols-outlined text-[20px]">visibility_off</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="button" onclick="location.href='dashboard.html'"
+                                class="w-full bg-primary hover:bg-[#d01141] text-white font-bold py-3.5 rounded-xl shadow-lg shadow-primary/20 transition-all transform active:scale-[0.98] mt-2">
+                                Sign In
+                            </button>
+                        </form>
+
+                        <!-- Card Footer -->
+                        <div class="mt-8 text-center">
+                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                Don't have an account? <button onclick="location.href='register_step1.html'"
+                                    class="text-primary font-bold hover:underline">Create Profile</button>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex justify-center gap-6 text-[10px] text-gray-400 font-medium uppercase tracking-widest pb-8">
+                        <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                        <span>•</span>
+                        <a class="hover:text-primary transition-colors" href="#">Terms & Conditions</a>
+                    </div>
+                </div>
+
+                <script>
+                    function toggleAuth(view) {
+                        const registerCard = document.getElementById('register-card');
+                        const loginCard = document.getElementById('login-card');
+
+                        if (view === 'login') {
+                            registerCard.classList.add('hidden');
+                            loginCard.classList.remove('hidden');
+                        } else {
+                            loginCard.classList.add('hidden');
+                            registerCard.classList.remove('hidden');
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

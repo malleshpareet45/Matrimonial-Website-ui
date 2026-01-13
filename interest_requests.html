@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Interest Requests | EternalVows</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Playfair+Display:wght@700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#800020", // Deep Maroon/Burgundy
+                        "accent-gold": "#D4AF37",
+                        "background-light": "#fcf8f9",
+                        "background-dark": "#1b0d11",
+                        "success-green": "#2D6A4F"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        h1,
+        h2,
+        h3,
+        .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .tab-active {
+            border-bottom-width: 2px;
+            --tw-border-opacity: 1;
+            border-color: rgb(128 0 32 / var(--tw-border-opacity));
+            --tw-text-opacity: 1;
+            color: rgb(128 0 32 / var(--tw-text-opacity));
+            font-weight: 700;
+        }
+    </style>
+    <style>
+        /* Custom scrollbar for sidebar */
+        aside::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        aside::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        aside::-webkit-scrollbar-thumb {
+            background: #e7cfd5;
+            border-radius: 10px;
+        }
+
+        aside::-webkit-scrollbar-thumb:hover {
+            background: #9a4c5f;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#1b0d11] dark:text-[#fcf8f9] antialiased">
+    <div class="flex min-h-screen overflow-x-hidden">
+        <!-- Side Navigation -->
+        <aside id="sidebar"
+            class="w-72 fixed left-0 top-0 h-full border-r border-border-soft dark:border-white/10 bg-white dark:bg-background-dark z-50 transition-transform duration-300 -translate-x-full lg:translate-x-0 overflow-y-auto">
+            <div class="flex flex-col h-full p-6 justify-between">
+                <div class="space-y-8">
+                    <!-- Logo -->
+                    <div class="flex items-center gap-3 px-2">
+                        <div class="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">favorite</span>
+                        </div>
+                        <h2 class="text-2xl font-black tracking-tight font-serif text-primary">EternalVows</h2>
+                    </div>
+                    <!-- User Profile Brief -->
+                    <div class="flex items-center gap-3 p-2">
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-primary/20"
+                            data-alt="Professional portrait of a young Indian man"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrr1VuX3sBAKD-x94-HjvNxCX8uLWlVrc5-e5DVqHH2JKkKdCUajS2o5rZfUHedywUfpwqjfXucbnr2EGFkAQry8I1oYf92Y8ZPx5VySZFwYdQQOevUhTkfg2H7Co5ccudM5WFGchIXrUtw2-E2tlbVexphAs37p1BaP5_eFS9K5F9ugVDQlWc1EgD26eQD1ui4MU_3lHozzCL_aIB2fD5uqTJCop4_zWwwHPJmN1098ZjplqQqd5XaDiHWEL4ASWg4YnqULhgjA");'>
+                        </div>
+                        <div class="flex flex-col">
+                            <h1 class="text-sm font-bold">Namaste, Rahul</h1>
+                            <p class="text-maroon-subtle dark:text-maroon-subtle text-xs">Premium Member</p>
+                        </div>
+                    </div>
+                    <!-- Nav Links -->
+                    <nav class="space-y-1">
+                        <a href="dashboard.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors">
+                            <span class="material-symbols-outlined">dashboard</span>
+                            <span class="text-sm">Dashboard</span>
+                        </a>
+                        <a href="profile.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors">
+                            <span class="material-symbols-outlined">person</span>
+                            <span class="text-sm">My Profile</span>
+                        </a>
+                        <a href="search.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors">
+                            <span class="material-symbols-outlined">search</span>
+                            <span class="text-sm">Search</span>
+                        </a>
+
+                        <a href="interest_requests.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-xl bg-cream-accent text-primary font-semibold">
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="text-sm">Interests</span>
+                        </a>
+                        <a href="chat.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors">
+                            <span class="material-symbols-outlined">chat_bubble</span>
+                            <span class="text-sm">Messages</span>
+                            <span class="ml-auto bg-primary text-white text-[10px] px-2 py-0.5 rounded-full">3</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors"
+                            href="settings.html">
+                            <span class="material-symbols-outlined">settings</span>
+                            <span class="text-sm">Settings</span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="pt-6 border-t border-border-soft dark:border-white/10">
+                    <button onclick="location.href='subscription.html'"
+                        class="w-full bg-primary hover:bg-primary/90 text-white rounded-xl py-3 text-sm font-bold transition-all shadow-lg shadow-primary/20">
+                        Upgrade Now
+                    </button>
+                </div>
+            </div>
+        </aside>
+        <!-- Main Content Area -->
+        <main class="lg:ml-72 flex-1 min-h-screen transition-all duration-300">
+            <!-- Top Header -->
+            <header
+                class="sticky top-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-border-soft dark:border-white/10 px-8 py-3 z-40">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <button onclick="document.getElementById('sidebar').classList.toggle('-translate-x-full');"
+                            class="lg:hidden p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors">
+                            <span class="material-symbols-outlined">menu</span>
+                        </button>
+                        <div>
+                            <h2 class="text-sm font-bold text-gray-900 dark:text-white">Interest Requests</h2>
+                            <p class="text-xs text-maroon-subtle">Manage your connections</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="relative hidden md:block w-64">
+                            <span
+                                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-maroon-subtle">search</span>
+                            <input
+                                class="w-full pl-12 pr-4 py-2.5 bg-cream-accent/50 border-none focus:ring-2 focus:ring-primary/20 rounded-xl text-sm placeholder:text-maroon-subtle"
+                                placeholder="Search IDs..." type="text" />
+                        </div>
+                        <button
+                            class="md:hidden p-2.5 bg-cream-accent/50 rounded-xl hover:bg-cream-accent text-maroon-subtle transition-colors">
+                            <span class="material-symbols-outlined">search</span>
+                        </button>
+                        <button
+                            class="p-2.5 bg-cream-accent/50 rounded-xl hover:bg-cream-accent text-maroon-subtle transition-colors relative">
+                            <span class="material-symbols-outlined">notifications</span>
+                            <span
+                                class="absolute top-2 right-2.5 w-2 h-2 bg-primary rounded-full border-2 border-white"></span>
+                        </button>
+                        <button
+                            class="p-2.5 bg-cream-accent/50 rounded-xl hover:bg-cream-accent text-maroon-subtle transition-colors">
+                            <span class="material-symbols-outlined">help</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <div class="p-6 lg:p-10 max-w-6xl mx-auto w-full">
+
+                <div class="flex border-b border-border-soft dark:border-white/10 mb-8 overflow-x-auto gap-8">
+                    <button class="py-4 text-sm font-bold border-b-2 border-primary text-primary transition-all">
+                        Received (12)
+                    </button>
+                    <button
+                        class="py-4 text-sm font-medium border-b-2 border-transparent text-gray-500 hover:text-primary transition-all">
+                        Sent (5)
+                    </button>
+                    <button
+                        class="py-4 text-sm font-medium border-b-2 border-transparent text-gray-500 hover:text-primary transition-all">
+                        Accepted
+                    </button>
+                    <button
+                        class="py-4 text-sm font-medium border-b-2 border-transparent text-gray-500 hover:text-primary transition-all">
+                        Archived
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 gap-6">
+                    <div
+                        class="bg-white dark:bg-[#2a161b] rounded-xl shadow-sm border border-primary/5 p-4 md:p-6 flex flex-col md:flex-row gap-6 hover:shadow-md transition-shadow">
+                        <div class="relative flex-shrink-0">
+                            <div class="size-32 md:size-40 rounded-lg bg-cover bg-center border-2 border-accent-gold/20"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDtACoWxgAl95s_iLmoJEPSxlDbQke5cQXEPIXbyFbL5pFL0R3de0Ex6jj1n--dWX7cRuFKU1mxrqQJCtg_LoCj4cNcsRTJaF6BPfWGTFTY7gRKobV23lB3SdjoTuDGCerto1htc1AS1ADdzpsDzRtljQLqZVqbm3B3oWIOX0eN1TGgYKaOK9n0CrRXR6bXcopGKOgZA_3TwjlAGCjPs_Epf8wOJ4wlVfo2Z1gtGWEztRlIc7Fbawxj30e9-bGgfIJ0qFohCVQ4WA");'>
+                            </div>
+                            <div
+                                class="absolute -bottom-2 -right-2 bg-success-green text-white size-8 rounded-full flex items-center justify-center border-2 border-white">
+                                <span class="material-symbols-outlined text-sm">verified</span>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3 class="text-xl font-bold serif-font text-primary dark:text-accent-gold">
+                                            Aditi
+                                            Sharma</h3>
+                                        <p class="text-sm font-medium opacity-60">ID: EU-44921</p>
+                                    </div>
+                                    <span
+                                        class="text-[11px] font-bold uppercase tracking-widest bg-primary/5 px-2 py-1 rounded">2
+                                        hours ago</span>
+                                </div>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-primary text-lg">person</span>
+                                        <span class="text-sm">26 Years, 5'4"</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-primary text-lg">work</span>
+                                        <span class="text-sm">Software Engineer</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                                        <span class="text-sm">Bangalore, India</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-primary text-lg">school</span>
+                                        <span class="text-sm">Masters (CS)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-6">
+                                <button
+                                    class="flex-1 md:flex-none md:min-w-[140px] bg-accent-gold hover:bg-accent-gold/90 text-primary font-bold py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-lg">check_circle</span>
+                                    Accept
+                                </button>
+                                <button
+                                    class="flex-1 md:flex-none md:min-w-[140px] border-2 border-primary/20 hover:border-primary text-primary dark:text-accent-gold font-bold py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-lg">cancel</span>
+                                    Decline
+                                </button>
+                                <button
+                                    class="size-10 flex-shrink-0 flex items-center justify-center border-2 border-primary/5 rounded-lg hover:bg-primary/5 text-primary">
+                                    <span class="material-symbols-outlined">more_horiz</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-[#2a161b] rounded-xl shadow-sm border border-primary/5 p-4 md:p-6 flex flex-col md:flex-row gap-6 hover:shadow-md transition-shadow">
+                        <div class="relative flex-shrink-0">
+                            <div class="size-32 md:size-40 rounded-lg bg-cover bg-center border-2 border-accent-gold/20"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVjTCj5MFiOyRh4EyaXfP0x2TnHr6S5jORTxXral7udQQpOYi2t5EIv1lD-aolSInYD9zKJd-OSR2dF8fs7b4Wt6ScbvnyGMq6XoWjwiF6EXwNbkXQTn-SV_w5WlwytvYXEuAujQ66A0pnUo-NyXm8jOeVPy1-Bykj9Ya56kTYAnOxqOw_nAkGWT8J-idwwt3nUu30mNal1xX1zUghhb7_y-zsz0pWlv_827qE80uGlv136gYT9wYkjC20urUd1WKuTIdDEGihig");'>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3 class="text-xl font-bold serif-font text-primary dark:text-accent-gold">
+                                            Priya
+                                            Deshmukh</h3>
+                                        <p class="text-sm font-medium opacity-60">ID: EU-88210</p>
+                                    </div>
+                                    <span
+                                        class="text-[11px] font-bold uppercase tracking-widest bg-primary/5 px-2 py-1 rounded">Yesterday</span>
+                                </div>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-primary text-lg">person</span>
+                                        <span class="text-sm">28 Years, 5'6"</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-primary text-lg">work</span>
+                                        <span class="text-sm">HR Manager</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                                        <span class="text-sm">Mumbai, India</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-primary text-lg">school</span>
+                                        <span class="text-sm">MBA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-6">
+                                <button
+                                    class="flex-1 md:flex-none md:min-w-[140px] bg-accent-gold hover:bg-accent-gold/90 text-primary font-bold py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-lg">check_circle</span>
+                                    Accept
+                                </button>
+                                <button
+                                    class="flex-1 md:flex-none md:min-w-[140px] border-2 border-primary/20 hover:border-primary text-primary dark:text-accent-gold font-bold py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-lg">cancel</span>
+                                    Decline
+                                </button>
+                                <button
+                                    class="size-10 flex-shrink-0 flex items-center justify-center border-2 border-primary/5 rounded-lg hover:bg-primary/5 text-primary">
+                                    <span class="material-symbols-outlined">more_horiz</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white/50 dark:bg-[#1b0d11]/50 rounded-xl shadow-sm border border-primary/10 p-4 md:p-6 flex flex-col md:flex-row gap-6 opacity-80">
+                        <div class="relative flex-shrink-0 grayscale">
+                            <div class="size-32 md:size-40 rounded-lg bg-cover bg-center border border-primary/10"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwdvAbbpyf--h7FXvZagSahsAbLm7mMJa0O_p2JBlDSzFDuE-L28cc8lMnQRgmM3NlA-vYJ82_OdG5imVdbjuMx7c_57ZQLJbE7grVUUhe66FznU406vcKzxI890kPLLb1i8ccpcfHi9uGtphiXW11DHo-i1Hlya5qMw-LFI2DhbgNGyxp8PkBTefjxYfGzqjW2V1pJceJHNYDpkkAKQbzfkTodUhyIO0cUsLsbjNxQPhSSfnyNNSCDOfXxLRkUrIzTAA-sj-zXw");'>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3
+                                            class="text-xl font-bold serif-font text-primary dark:text-accent-gold opacity-60">
+                                            Vikram Malhotra</h3>
+                                        <p class="text-sm font-medium opacity-40">Sent 3 days ago</p>
+                                    </div>
+                                    <span
+                                        class="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest bg-gray-100 dark:bg-gray-800 px-3 py-1.5 rounded-full text-gray-500">
+                                        <span class="size-1.5 bg-gray-400 rounded-full animate-pulse"></span>
+                                        Pending Response
+                                    </span>
+                                </div>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 opacity-50">
+                                    <div class="flex items-center gap-2 text-sm">30 Years, 6'0"</div>
+                                    <div class="flex items-center gap-2 text-sm">Product Manager</div>
+                                    <div class="flex items-center gap-2 text-sm">Delhi, India</div>
+                                    <div class="flex items-center gap-2 text-sm">B.Tech, IIT</div>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-6">
+                                <button
+                                    class="flex-1 md:flex-none md:min-w-[180px] border border-primary/20 text-primary dark:text-accent-gold text-xs font-bold py-2 rounded-lg hover:bg-primary/5 transition-colors">
+                                    Withdraw Interest
+                                </button>
+                                <button
+                                    class="flex-1 md:flex-none md:min-w-[180px] border border-primary/20 text-primary dark:text-accent-gold text-xs font-bold py-2 rounded-lg hover:bg-primary/5 transition-colors">
+                                    Remind
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="mt-12 p-6 bg-primary/5 rounded-xl border border-primary/10 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="size-12 bg-primary text-white rounded-full flex items-center justify-center">
+                            <span class="material-symbols-outlined">auto_awesome</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold serif-font">Looking for better matches?</h4>
+                            <p class="text-xs opacity-60">Based on your interests, we recommend refining your search
+                                filters.</p>
+                        </div>
+                    </div>
+                    <button onclick="location.href='search.html'"
+                        class="px-6 py-2 bg-primary text-white text-sm font-bold rounded-lg shadow-md hover:bg-primary/90 transition-all">
+                        Update Search Criteria
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

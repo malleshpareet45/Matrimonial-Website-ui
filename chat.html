@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Messages &amp; Chat Interface - EternalVows</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#800020",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221015",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+    <div class="flex min-h-screen overflow-hidden">
+        <!-- Side Navigation -->
+        <aside id="sidebar"
+            class="w-72 fixed left-0 top-0 h-full border-r border-border-soft dark:border-white/10 bg-white dark:bg-background-dark z-50 transition-transform duration-300 -translate-x-full lg:translate-x-0 overflow-y-auto">
+            <div class="flex flex-col h-full p-6 justify-between">
+                <div class="space-y-8">
+                    <!-- Logo -->
+                    <div class="flex items-center gap-3 px-2">
+                        <div class="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">favorite</span>
+                        </div>
+                        <h2 class="text-2xl font-black tracking-tight font-serif text-primary">EternalVows</h2>
+                    </div>
+                    <!-- User Profile Brief -->
+                    <div class="flex items-center gap-3 p-2">
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-primary/20"
+                            data-alt="Professional portrait of a young Indian man"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrr1VuX3sBAKD-x94-HjvNxCX8uLWlVrc5-e5DVqHH2JKkKdCUajS2o5rZfUHedywUfpwqjfXucbnr2EGFkAQry8I1oYf92Y8ZPx5VySZFwYdQQOevUhTkfg2H7Co5ccudM5WFGchIXrUtw2-E2tlbVexphAs37p1BaP5_eFS9K5F9ugVDQlWc1EgD26eQD1ui4MU_3lHozzCL_aIB2fD5uqTJCop4_zWwwHPJmN1098ZjplqQqd5XaDiHWEL4ASWg4YnqULhgjA");'>
+                        </div>
+                        <div class="flex flex-col">
+                            <h1 class="text-sm font-bold">Namaste, Rahul</h1>
+                            <p class="text-maroon-subtle dark:text-maroon-subtle text-xs">Premium Member</p>
+                        </div>
+                    </div>
+                    <!-- Nav Links -->
+                    <nav class="space-y-1">
+                        <a href="dashboard.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors">
+                            <span class="material-symbols-outlined">dashboard</span>
+                            <span class="text-sm">Dashboard</span>
+                        </a>
+                        <a href="profile.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors">
+                            <span class="material-symbols-outlined">person</span>
+                            <span class="text-sm">My Profile</span>
+                        </a>
+                        <a href="search.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors">
+                            <span class="material-symbols-outlined">search</span>
+                            <span class="text-sm">Search</span>
+                        </a>
+
+                        <a href="interest_requests.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors">
+                            <span class="material-symbols-outlined">star</span>
+                            <span class="text-sm">Interests</span>
+                        </a>
+                        <a href="chat.html"
+                            class="flex items-center gap-3 px-4 py-3 rounded-xl bg-cream-accent text-primary font-semibold">
+                            <span class="material-symbols-outlined">chat_bubble</span>
+                            <span class="text-sm">Messages</span>
+                            <span class="ml-auto bg-primary text-white text-[10px] px-2 py-0.5 rounded-full">3</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors"
+                            href="settings.html">
+                            <span class="material-symbols-outlined">settings</span>
+                            <span class="text-sm">Settings</span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="pt-6 border-t border-border-soft dark:border-white/10">
+                    <button onclick="location.href='subscription.html'"
+                        class="w-full bg-primary hover:bg-primary/90 text-white rounded-xl py-3 text-sm font-bold transition-all shadow-lg shadow-primary/20">
+                        Upgrade Now
+                    </button>
+                </div>
+            </div>
+        </aside>
+        <!-- Main Content Area -->
+        <main class="lg:ml-72 flex-1 h-screen flex flex-col transition-all duration-300">
+            <!-- Top Header -->
+            <header
+                class="shrink-0 bg-white dark:bg-slate-900 border-b border-border-soft dark:border-slate-800 px-8 py-3 z-40">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <button onclick="document.getElementById('sidebar').classList.toggle('-translate-x-full');"
+                            class="lg:hidden p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors">
+                            <span class="material-symbols-outlined">menu</span>
+                        </button>
+                        <div>
+                            <h2 class="text-sm font-bold text-gray-900 dark:text-white">Messages</h2>
+                            <p class="text-xs text-maroon-subtle">Manage your conversations</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="relative hidden md:block w-64">
+                            <span
+                                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-maroon-subtle">search</span>
+                            <input
+                                class="w-full pl-12 pr-4 py-2.5 bg-cream-accent/50 border-none focus:ring-2 focus:ring-primary/20 rounded-xl text-sm placeholder:text-maroon-subtle"
+                                placeholder="Search IDs..." type="text" />
+                        </div>
+                        <button
+                            class="md:hidden p-2.5 bg-cream-accent/50 rounded-xl hover:bg-cream-accent text-maroon-subtle transition-colors">
+                            <span class="material-symbols-outlined">search</span>
+                        </button>
+                        <button
+                            class="p-2.5 bg-cream-accent/50 rounded-xl hover:bg-cream-accent text-maroon-subtle transition-colors relative">
+                            <span class="material-symbols-outlined">notifications</span>
+                            <span
+                                class="absolute top-2 right-2.5 w-2 h-2 bg-primary rounded-full border-2 border-white"></span>
+                        </button>
+                        <button
+                            class="p-2.5 bg-cream-accent/50 rounded-xl hover:bg-cream-accent text-maroon-subtle transition-colors">
+                            <span class="material-symbols-outlined">help</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <div class="flex-1 flex overflow-hidden">
+                <!-- Main Workspace -->
+
+                <!-- Left Sidebar: Conversations Hub -->
+                <aside
+                    class="w-80 lg:w-96 flex flex-col border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-y-auto scrollbar-hide">
+                    <div class="p-4 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <h1 class="text-xl font-bold text-slate-900 dark:text-white">Conversations</h1>
+                            <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+                                <span
+                                    class="material-symbols-outlined text-slate-600 dark:text-slate-300">filter_list</span>
+                            </button>
+                        </div>
+                        <!-- Search Bar Component -->
+                        <div class="relative">
+                            <span
+                                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
+                            <input
+                                class="w-full pl-10 pr-4 py-3 rounded-xl border-none bg-background-light dark:bg-background-dark focus:ring-2 focus:ring-primary/20 text-sm"
+                                placeholder="Search chats..." type="text" />
+                        </div>
+                    </div>
+                    <!-- Chat List Items -->
+                    <div class="flex-1 overflow-y-auto">
+                        <!-- Active/Selected Chat -->
+                        <div
+                            class="flex items-center gap-4 px-4 py-4 bg-primary/5 dark:bg-primary/10 border-l-4 border-primary cursor-pointer">
+                            <div class="relative shrink-0">
+                                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14 border-2 border-white dark:border-slate-800"
+                                    data-alt="Priya Sharma profile picture"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuChLzj34sTfpTHSG5YrBFWtfTMYvwfCDBawpoucSbPtC3imJJeXuk0QGU-N0B6exrBXVJMCebtvRdde0j4deAos1BpdJ0N1J42DIROfmGQUv9K5QpCeDURmA31eK2qmUvJfnKb8_4tAIyeyXkZ_Gc6_6jRZ0f_taaUZeFT3GE3ymVhxdmaItln7pItRhlSuevXY6d-TG0gDzwKEG3If9Df4FqDYzLxpMecxnI00qJqdChlEB-0vS3kNPD0LuBSA50Tmp0SlebfmWA");'>
+                                </div>
+                                <div
+                                    class="absolute bottom-0 right-0 size-3.5 rounded-full bg-green-500 border-2 border-white dark:border-slate-900">
+                                </div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex justify-between items-baseline">
+                                    <p class="text-slate-900 dark:text-white text-base font-bold truncate">Priya Sharma
+                                    </p>
+                                    <p class="text-slate-400 text-[10px] uppercase font-bold">10:30 AM</p>
+                                </div>
+                                <p class="text-primary text-sm font-semibold truncate">Hi, I liked your profile...</p>
+                            </div>
+                        </div>
+                        <!-- Other Chat Items -->
+                        <div
+                            class="flex items-center gap-4 px-4 py-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors border-b border-slate-100 dark:border-slate-800">
+                            <div class="relative shrink-0">
+                                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14"
+                                    data-alt="Rahul Verma profile picture"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA18jus3o35ppMZjcP7-5leffenvWcH5FQWERfaze8zD9CwkEtrhJwk3lVihhPRgtfMqj_IMYLEjlMvaxfOI9Hyt7Ht2jaPRQUC0LyDW2Q3g3hR2tSfQmsIcXC9WbmcUcHnX6x74oQCvQy4yH5OHacEapEYu_ehOcWY9MUkJ-M5AFDcUpbE-3NlZzSlmNOS19EW7eE2c1RuYXsxhZjEqOlUchFfqArIf1iSBIipvVx6F1_OpT_f4TUGA6u7lXO6gyqzyyzjBlpsLQ");'>
+                                </div>
+                                <div
+                                    class="absolute bottom-0 right-0 size-3.5 rounded-full bg-slate-300 border-2 border-white dark:border-slate-900">
+                                </div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex justify-between items-baseline">
+                                    <p class="text-slate-900 dark:text-white text-base font-medium truncate">Rahul Verma
+                                    </p>
+                                    <p class="text-slate-400 text-[10px] uppercase font-bold">YESTERDAY</p>
+                                </div>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm truncate">Are you free to talk?</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-4 px-4 py-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors border-b border-slate-100 dark:border-slate-800">
+                            <div class="relative shrink-0">
+                                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14"
+                                    data-alt="Ananya Patel profile picture"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASBRmwXTbDf7CM6Q2cDH4lifvNsaEGKA21NXPvfZ0PV45CuPsVTNKdTUunzGM1UiUL1rBpQJKCOiRuMVEbPs6YMVHs7hzj1E5Mo5auLquX1JGR029BKHGyc7_PJrDpkya9fk5vck4OHpG5kaQusa1HpB07f2a3KZVDprphVI2Re3UC7NGvf-89g9PT5VuKHi6q6MQzsn8JlE1yAUho3618jO0NBjqVd-thX2UCsbSWW43tGM2UFeQ_h8S_zGjcmYjTCPdrqZ55_Q");'>
+                                </div>
+                                <div
+                                    class="absolute bottom-0 right-0 size-3.5 rounded-full bg-green-500 border-2 border-white dark:border-slate-900">
+                                </div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex justify-between items-baseline">
+                                    <div class="flex items-center gap-1 min-w-0">
+                                        <p class="text-slate-900 dark:text-white text-base font-medium truncate">Ananya
+                                            Patel</p>
+                                        <span class="material-symbols-outlined text-primary text-sm"
+                                            title="Premium Member">verified</span>
+                                    </div>
+                                    <p class="text-slate-400 text-[10px] uppercase font-bold">OCT 22</p>
+                                </div>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm truncate">It was great connecting
+                                    with
+                                    you</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-4 px-4 py-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors border-b border-slate-100 dark:border-slate-800">
+                            <div class="relative shrink-0">
+                                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14"
+                                    data-alt="Karan Singh profile picture"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDV_iKrPc6affol3_VD2xcw2FF5ygUCT2V9KPcrizlSMZceqpYZgA0wXV2XcelZW9HZUp8YEiSjXy5jMZaK_omiDJbqU4Kq_gLnODs9P5gPgWU-SS7S9mpHCjF4Bmz0enh2ajtPn5JXPVgLYdP3J3gUASInizrXDBfYhLY2KglvyQ5OP9Dm_SBM1Susthig_7iDsowTMLHis05ZB_E2SbTq9l3DeuvPXjk9ojamsgR4vYLAVBV46bGYN4kQa147E5k0BpnoHiKvaw");'>
+                                </div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex justify-between items-baseline">
+                                    <p class="text-slate-900 dark:text-white text-base font-medium truncate">Karan Singh
+                                    </p>
+                                    <p class="text-slate-400 text-[10px] uppercase font-bold">OCT 20</p>
+                                </div>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm truncate">I am based in Mumbai,
+                                    what
+                                    about you?</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <!-- Right Main Chat Window -->
+                <section class="flex flex-1 flex-col bg-white dark:bg-slate-900">
+                    <!-- Chat Header -->
+                    <header
+                        class="flex items-center justify-between px-6 py-4 border-b border-slate-200 dark:border-slate-800">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 border-2 border-primary/20"
+                                data-alt="Priya Sharma avatar"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvTUujiabgJN6uc-d-PrtYhzz5aPIKjNnQucF_9LRQ9UoCZtGFD08UH1-FarD6Jm1MJzWOsFMxqe7GKF34Vw91MlP_eW8MOnVhtw1HQP65JU0OVjsBGbMdLFRVZdFGcZ17pkO1Iq5CiFOQg1-MdwCKHSPaCmwnI3ghnWE3a3qIR6LrMav61iYiDZGO6ooFk62YgkFJI9sNqcGPI-hjnToxz9DS7LXRwyU12fml5z9O8Nh8dt4_FHLtSE15957ccNFMFmQ8KUkrZg");'>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h3 class="text-lg font-bold text-slate-900 dark:text-white leading-none">Priya
+                                        Sharma,
+                                        27</h3>
+                                    <span class="size-2 rounded-full bg-green-500"></span>
+                                </div>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm">Mumbai • Online</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <button onclick="location.href='profile.html'"
+                                class="px-4 py-2 text-primary font-bold text-sm hover:bg-primary/5 rounded-lg transition-colors border border-primary/20">View
+                                Profile</button>
+                            <button class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400">
+                                <span class="material-symbols-outlined">more_vert</span>
+                            </button>
+                        </div>
+                    </header>
+                    <!-- Messages History -->
+                    <div
+                        class="flex-1 overflow-y-auto p-6 space-y-6 bg-background-light dark:bg-background-dark/30 scrollbar-hide">
+                        <!-- Safety Banner -->
+                        <div class="flex justify-center">
+                            <div
+                                class="bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 rounded-lg px-4 py-2 flex items-center gap-3 max-w-md">
+                                <span class="material-symbols-outlined text-blue-500 text-xl">info</span>
+                                <p class="text-xs text-blue-700 dark:text-blue-300">Safety Tip: Never share your OTP or
+                                    bank
+                                    details with anyone.</p>
+                            </div>
+                        </div>
+                        <!-- Date Divider -->
+                        <div class="flex justify-center">
+                            <span
+                                class="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full">Today</span>
+                        </div>
+                        <!-- Received Message -->
+                        <div class="flex gap-3 max-w-[80%]">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-8 w-8 mt-1 shrink-0"
+                                data-alt="Priya avatar"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAQHdsOgTEz-JyGwBRWjlpqPj214nBS6Sx2mspa8PWjGV-3cA-1vJsYmpi3PzdLgFNf0N0hJLXS935mAglzSgdn_QdpPi-Y9xemHRvkIz_pmN4xZYWA9c536MPpeBUWz76tQGVL3EjI3xpsqcx1UrxlYTWOI85NiTNUkwNoUfs_maTFKhDm0ja1BRmAzLXLY-rTH8DHnQp2fFYInbIXD45OO1zRBkY270SB8hs3oYIWTssWrByCkKgqeI-KnJlHQojaR5aKXurY0Q");'>
+                            </div>
+                            <div>
+                                <div
+                                    class="bg-white dark:bg-slate-800 p-4 rounded-xl rounded-tl-none shadow-sm border border-slate-100 dark:border-slate-700">
+                                    <p class="text-slate-800 dark:text-slate-200 text-sm leading-relaxed">Namaste! I saw
+                                        your profile and really liked your professional background. I'm also working in
+                                        tech.</p>
+                                </div>
+                                <p class="text-[10px] text-slate-400 mt-1 ml-1">10:15 AM</p>
+                            </div>
+                        </div>
+                        <!-- Sent Message -->
+                        <div class="flex flex-row-reverse gap-3 max-w-[80%] ml-auto">
+                            <div class="flex flex-col items-end">
+                                <div class="bg-primary p-4 rounded-xl rounded-tr-none shadow-md">
+                                    <p class="text-white text-sm leading-relaxed">Thank you, Priya! It's great to
+                                        connect. I
+                                        noticed you mentioned being a food enthusiast in your bio. What's your favorite
+                                        cuisine?</p>
+                                </div>
+                                <div class="flex items-center gap-1 mt-1 mr-1">
+                                    <p class="text-[10px] text-slate-400">10:28 AM</p>
+                                    <span
+                                        class="material-symbols-outlined text-primary text-xs font-bold">done_all</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Received Message -->
+                        <div class="flex gap-3 max-w-[80%]">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-8 w-8 mt-1 shrink-0"
+                                data-alt="Priya avatar"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlsKQWgq57rNQfS9wPraSuZgldSIDJvW2FxVSixWr35g7WZZhZOEr-2vEOJGKc7soRddJRZ0fSHJ9pK2csxartUk-FVQGsMM9u2fS176wBkoO5Gg0AYpQP91591k7HT8Vv_5TQPSRJciplh8Fb_sAW6BWFr-O5LS5srzVKWD7nJeQTDPcGqrZYOWsGal0ylJAGGIR5gK6S4i3mzk8iJYNoQlFO7ym4cfvsSTeVlFIAZIR0DmuBEQn8_83n-4bUitQv_ahStECgEg");'>
+                            </div>
+                            <div>
+                                <div
+                                    class="bg-white dark:bg-slate-800 p-4 rounded-xl rounded-tl-none shadow-sm border border-slate-100 dark:border-slate-700">
+                                    <p class="text-slate-800 dark:text-slate-200 text-sm leading-relaxed">Hi, I liked
+                                        your
+                                        profile... I definitely love South Indian! Especially the ones from small
+                                        authentic
+                                        places. Are you from Mumbai too?</p>
+                                </div>
+                                <p class="text-[10px] text-slate-400 mt-1 ml-1">10:30 AM</p>
+                            </div>
+                        </div>
+                        <!-- Typing Indicator -->
+                        <div class="flex gap-3 max-w-[80%]">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-8 w-8 shrink-0"
+                                data-alt="Priya avatar"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAIDH-RNur4eX680w0n4izNJhjEO707f94S8AqxwfIyac76w9598KXPc8mmR46lThabBzDI7315_Cln6s5TLslDXD1UtDWa-DOv-k-olqLkxCwcFz30wL5pNmyxPR4IMPNSWvjDWNC9ApgK7tzQa04dxgOTpI-iu5EfpQTVpcI7fvcRGxSuWB-U6bVvEPYMWKyyTpv0iCCPoIHY7pNouBienKCD28FMw_BIKfWGzLm5DjcpVdkAX1OQg10mGX5WumxOw3RMLHQCOg");'>
+                            </div>
+                            <div
+                                class="flex items-center gap-1 bg-white/50 dark:bg-slate-800/50 px-3 py-2 rounded-full">
+                                <span class="size-1.5 bg-slate-400 rounded-full animate-bounce"></span>
+                                <span
+                                    class="size-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:0.2s]"></span>
+                                <span
+                                    class="size-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:0.4s]"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Input Area -->
+                    <footer class="p-4 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+                        <div class="flex items-end gap-3 max-w-5xl mx-auto">
+                            <div class="flex-1 relative">
+                                <div class="flex items-center absolute left-3 bottom-3 gap-2">
+                                    <button class="text-slate-400 hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined">sentiment_satisfied</span>
+                                    </button>
+                                    <button class="text-slate-400 hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined">attach_file</span>
+                                    </button>
+                                </div>
+                                <textarea
+                                    class="w-full pl-20 pr-4 py-3 bg-slate-100 dark:bg-slate-800 border-none rounded-xl focus:ring-2 focus:ring-primary/20 resize-none max-h-32 text-slate-900 dark:text-white"
+                                    placeholder="Type a message..." rows="1"></textarea>
+                            </div>
+                            <button onclick="alert('Message sent!');"
+                                class="bg-primary text-white h-12 w-12 rounded-xl flex items-center justify-center hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                                <span class="material-symbols-outlined">send</span>
+                            </button>
+                        </div>
+                    </footer>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

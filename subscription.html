@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Membership Subscription Plans | EternalVows Matrimony</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#800020",
+            "background-light": "#fcf8f9",
+            "background-dark": "#221015",
+            "gold-accent": "#D4AF37",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"],
+            "serif": ["Playfair Display", "serif"]
+          },
+          borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .gold-border-glow {
+      border: 2px solid #D4AF37;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+    }
+  </style>
+  <style>
+    /* Custom scrollbar for sidebar */
+    aside::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    aside::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    aside::-webkit-scrollbar-thumb {
+      background: #e7cfd5;
+      border-radius: 10px;
+    }
+
+    aside::-webkit-scrollbar-thumb:hover {
+      background: #9a4c5f;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#1b0d11] dark:text-[#fcf8f9] antialiased">
+  <div class="flex min-h-screen overflow-x-hidden">
+    <!-- Side Navigation -->
+    <aside id="sidebar"
+      class="w-72 fixed left-0 top-0 h-full border-r border-border-soft dark:border-white/10 bg-white dark:bg-background-dark z-50 transition-transform duration-300 -translate-x-full lg:translate-x-0 overflow-y-auto">
+      <div class="flex flex-col h-full p-6 justify-between">
+        <div class="space-y-8">
+          <!-- Logo -->
+          <div class="flex items-center gap-3 px-2">
+            <div class="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+            </div>
+            <h2 class="text-2xl font-black tracking-tight font-serif text-primary">EternalVows</h2>
+          </div>
+          <!-- User Profile Brief -->
+          <div class="flex items-center gap-3 p-2">
+            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-primary/20"
+              data-alt="Professional portrait of a young Indian man"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrr1VuX3sBAKD-x94-HjvNxCX8uLWlVrc5-e5DVqHH2JKkKdCUajS2o5rZfUHedywUfpwqjfXucbnr2EGFkAQry8I1oYf92Y8ZPx5VySZFwYdQQOevUhTkfg2H7Co5ccudM5WFGchIXrUtw2-E2tlbVexphAs37p1BaP5_eFS9K5F9ugVDQlWc1EgD26eQD1ui4MU_3lHozzCL_aIB2fD5uqTJCop4_zWwwHPJmN1098ZjplqQqd5XaDiHWEL4ASWg4YnqULhgjA");'>
+            </div>
+            <div class="flex flex-col">
+              <h1 class="text-sm font-bold">Namaste, Rahul</h1>
+              <p class="text-maroon-subtle dark:text-maroon-subtle text-xs">Premium Member</p>
+            </div>
+          </div>
+          <!-- Nav Links -->
+          <nav class="space-y-1">
+            <a href="dashboard.html"
+              class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors">
+              <span class="material-symbols-outlined">dashboard</span>
+              <span class="text-sm">Dashboard</span>
+            </a>
+            <a href="profile.html"
+              class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors">
+              <span class="material-symbols-outlined">person</span>
+              <span class="text-sm">My Profile</span>
+            </a>
+            <a href="search.html"
+              class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors">
+              <span class="material-symbols-outlined">search</span>
+              <span class="text-sm">Search</span>
+            </a>
+
+            <a href="interest_requests.html"
+              class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors">
+              <span class="material-symbols-outlined">star</span>
+              <span class="text-sm">Interests</span>
+            </a>
+            <a href="chat.html"
+              class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors">
+              <span class="material-symbols-outlined">chat_bubble</span>
+              <span class="text-sm">Messages</span>
+              <span class="ml-auto bg-primary text-white text-[10px] px-2 py-0.5 rounded-full">3</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-cream-accent/50 transition-colors"
+              href="settings.html">
+              <span class="material-symbols-outlined">settings</span>
+              <span class="text-sm">Settings</span>
+            </a>
+          </nav>
+        </div>
+        <div class="pt-6 border-t border-border-soft dark:border-white/10">
+          <button onclick="location.href='subscription.html'"
+            class="w-full bg-primary hover:bg-primary/90 text-white rounded-xl py-3 text-sm font-bold transition-all shadow-lg shadow-primary/20">
+            Upgrade Now
+          </button>
+        </div>
+      </div>
+    </aside>
+    <!-- Main Content Area -->
+    <main class="lg:ml-72 flex-1 min-h-screen transition-all duration-300">
+      <!-- Top Header -->
+      <header
+        class="sticky top-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-border-soft dark:border-white/10 px-8 py-3 z-40">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <button onclick="document.getElementById('sidebar').classList.toggle('-translate-x-full');"
+              class="lg:hidden p-2 text-primary hover:bg-primary/10 rounded-lg transition-colors">
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+            <div>
+              <h2 class="text-sm font-bold text-gray-900 dark:text-white">Subscription Plans</h2>
+              <p class="text-xs text-maroon-subtle">Choose your membership</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="relative hidden md:block w-64">
+              <span
+                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-maroon-subtle">search</span>
+              <input
+                class="w-full pl-12 pr-4 py-2.5 bg-cream-accent/50 border-none focus:ring-2 focus:ring-primary/20 rounded-xl text-sm placeholder:text-maroon-subtle"
+                placeholder="Search IDs..." type="text" />
+            </div>
+            <button
+              class="md:hidden p-2.5 bg-cream-accent/50 rounded-xl hover:bg-cream-accent text-maroon-subtle transition-colors">
+              <span class="material-symbols-outlined">search</span>
+            </button>
+            <button
+              class="p-2.5 bg-cream-accent/50 rounded-xl hover:bg-cream-accent text-maroon-subtle transition-colors relative">
+              <span class="material-symbols-outlined">notifications</span>
+              <span class="absolute top-2 right-2.5 w-2 h-2 bg-primary rounded-full border-2 border-white"></span>
+            </button>
+            <button
+              class="p-2.5 bg-cream-accent/50 rounded-xl hover:bg-cream-accent text-maroon-subtle transition-colors">
+              <span class="material-symbols-outlined">help</span>
+            </button>
+          </div>
+        </div>
+
+      </header>
+      <div class="p-6 lg:p-10 max-w-[1200px] mx-auto">
+        <!-- Page Heading -->
+        <div class="flex flex-col items-center text-center gap-4 mb-16">
+          <h1
+            class="text-[#1b0d11] dark:text-[#fcf8f9] text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] max-w-2xl">
+            Find Your Life Partner with the Right Plan
+          </h1>
+          <p class="text-[#9a4c5f] dark:text-[#d1a2ae] text-lg max-w-xl">
+            Unlock exclusive features and connect with verified profiles to find 'The One' faster.
+          </p>
+          <div class="mt-4 flex gap-3">
+            <span
+              class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-wider">Trusted
+              by 2M+ Members</span>
+          </div>
+        </div>
+        <!-- Pricing Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-20">
+          <!-- Free Plan -->
+          <div
+            class="flex flex-col gap-6 rounded-2xl border border-solid border-[#e7cfd5] dark:border-[#3d2a2f] bg-white dark:bg-[#2d1a1f] p-8 transition-transform hover:-translate-y-1">
+            <div class="flex flex-col gap-2">
+              <h3 class="text-[#1b0d11] dark:text-[#fcf8f9] text-xl font-bold">Free</h3>
+              <p class="text-[#9a4c5f] dark:text-[#d1a2ae] text-sm">Perfect for exploring</p>
+              <p class="flex items-baseline gap-1 mt-4">
+                <span class="text-[#1b0d11] dark:text-[#fcf8f9] text-5xl font-black tracking-tighter">₹0</span>
+                <span class="text-[#9a4c5f] dark:text-[#d1a2ae] text-base font-bold">/lifetime</span>
+              </p>
+            </div>
+            <button
+              class="w-full flex cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-[#f3e7ea] dark:bg-[#3d2a2f] text-[#1b0d11] dark:text-white text-sm font-bold hover:bg-[#e7cfd5] transition-colors">
+              Current Plan
+            </button>
+            <div class="flex flex-col gap-4 mt-2">
+              <div class="flex items-start gap-3 text-sm">
+                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                <span>Create &amp; Verify Profile</span>
+              </div>
+              <div class="flex items-start gap-3 text-sm">
+                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                <span>Express Interest to Matches</span>
+              </div>
+              <div class="flex items-start gap-3 text-sm opacity-50">
+                <span class="material-symbols-outlined text-xl">block</span>
+                <span>No Direct Messages</span>
+              </div>
+              <div class="flex items-start gap-3 text-sm opacity-50">
+                <span class="material-symbols-outlined text-xl">block</span>
+                <span>Limited Photo Visibility</span>
+              </div>
+            </div>
+          </div>
+          <!-- Gold Plan (Recommended / Premium) -->
+          <div
+            class="relative flex flex-col gap-6 rounded-2xl gold-border-glow bg-white dark:bg-[#2d1a1f] p-8 transition-transform hover:-translate-y-2 scale-105 z-10 shadow-2xl">
+            <div
+              class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold-accent text-white px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest shadow-lg">
+              Recommended
+            </div>
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center justify-between">
+                <h3 class="text-gold-accent text-xl font-black">Gold</h3>
+                <span class="material-symbols-outlined text-gold-accent">verified_user</span>
+              </div>
+              <p class="text-[#9a4c5f] dark:text-[#d1a2ae] text-sm">Premium matchmaking experience</p>
+              <p class="flex items-baseline gap-1 mt-4">
+                <span class="text-[#1b0d11] dark:text-[#fcf8f9] text-5xl font-black tracking-tighter">₹4,999</span>
+                <span class="text-[#9a4c5f] dark:text-[#d1a2ae] text-base font-bold">/6 months</span>
+              </p>
+            </div>
+            <button onclick="alert('Payment Successful!'); location.href='dashboard.html'"
+              class="w-full flex cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+              Get Started Now
+            </button>
+            <div class="flex flex-col gap-4 mt-2">
+              <div class="flex items-start gap-3 text-sm">
+                <span class="material-symbols-outlined text-gold-accent text-xl">stars</span>
+                <span class="font-bold">Everything in Silver</span>
+              </div>
+              <div class="flex items-start gap-3 text-sm">
+                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                <span>Unlimited Direct Messaging</span>
+              </div>
+              <div class="flex items-start gap-3 text-sm">
+                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                <span>Unlimited Contact Detail Views</span>
+              </div>
+              <div class="flex items-start gap-3 text-sm">
+                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                <span>Profile Highlighter (3x visibility)</span>
+              </div>
+              <div class="flex items-start gap-3 text-sm">
+                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                <span>Dedicated Relationship Manager</span>
+              </div>
+              <div class="flex items-start gap-3 text-sm">
+                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                <span>Advanced Privacy Controls</span>
+              </div>
+            </div>
+          </div>
+          <!-- Silver Plan (Standard) -->
+          <div
+            class="flex flex-col gap-6 rounded-2xl border border-solid border-[#e7cfd5] dark:border-[#3d2a2f] bg-white dark:bg-[#2d1a1f] p-8 transition-transform hover:-translate-y-1">
+            <div class="flex flex-col gap-2">
+              <h3 class="text-[#1b0d11] dark:text-[#fcf8f9] text-xl font-bold">Silver</h3>
+              <p class="text-[#9a4c5f] dark:text-[#d1a2ae] text-sm">Enhanced connectivity</p>
+              <p class="flex items-baseline gap-1 mt-4">
+                <span class="text-[#1b0d11] dark:text-[#fcf8f9] text-5xl font-black tracking-tighter">₹2,999</span>
+                <span class="text-[#9a4c5f] dark:text-[#d1a2ae] text-base font-bold">/3 months</span>
+              </p>
+            </div>
+            <button onclick="alert('Payment Successful!'); location.href='dashboard.html'"
+              class="w-full flex cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-[#f3e7ea] dark:bg-[#3d2a2f] text-[#1b0d11] dark:text-white text-sm font-bold hover:bg-[#e7cfd5] transition-colors">
+              Upgrade Now
+            </button>
+            <div class="flex flex-col gap-4 mt-2">
+              <div class="flex items-start gap-3 text-sm">
+                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                <span>Unlimited Direct Messaging</span>
+              </div>
+              <div class="flex items-start gap-3 text-sm">
+                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                <span>View 25 Contact Numbers</span>
+              </div>
+              <div class="flex items-start gap-3 text-sm">
+                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                <span>Profile Boost (1 Month)</span>
+              </div>
+              <div class="flex items-start gap-3 text-sm">
+                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                <span>Standard Customer Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trust & Security -->
+        <div
+          class="bg-primary/5 dark:bg-primary/10 rounded-2xl p-8 mb-20 flex flex-col md:flex-row items-center justify-between gap-8 border border-primary/10">
+          <div class="flex items-center gap-6">
+            <div class="bg-white dark:bg-[#2d1a1f] p-3 rounded-full shadow-sm">
+              <span class="material-symbols-outlined text-primary text-4xl">security</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">100% Secure Payments</h4>
+              <p class="text-sm text-[#9a4c5f] dark:text-[#d1a2ae]">Your data and transactions are encrypted and safe.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-6 opacity-70 grayscale">
+            <div class="flex flex-col items-center">
+              <span class="material-symbols-outlined text-3xl">account_balance</span>
+              <span class="text-[10px] font-bold uppercase mt-1">Net Banking</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <span class="material-symbols-outlined text-3xl">credit_card</span>
+              <span class="text-[10px] font-bold uppercase mt-1">Visa/Master</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <span class="material-symbols-outlined text-3xl">qr_code_2</span>
+              <span class="text-[10px] font-bold uppercase mt-1">UPI Pay</span>
+            </div>
+          </div>
+        </div>
+        <!-- FAQ Section -->
+        <div class="max-w-3xl mx-auto mb-20">
+          <h2 class="text-2xl font-black mb-8 text-center">Frequently Asked Questions</h2>
+          <div class="flex flex-col gap-4">
+            <details
+              class="group bg-white dark:bg-[#2d1a1f] border border-[#e7cfd5] dark:border-[#3d2a2f] rounded-xl overflow-hidden"
+              open="">
+              <summary class="flex items-center justify-between p-5 cursor-pointer list-none font-bold">
+                <span>Can I upgrade my plan later?</span>
+                <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+              </summary>
+              <div class="p-5 pt-0 text-[#9a4c5f] dark:text-[#d1a2ae] text-sm leading-relaxed">
+                Yes, you can upgrade from Silver to Gold at any time. The remaining balance of your current plan will be
+                adjusted against the new subscription.
+              </div>
+            </details>
+            <details
+              class="group bg-white dark:bg-[#2d1a1f] border border-[#e7cfd5] dark:border-[#3d2a2f] rounded-xl overflow-hidden">
+              <summary class="flex items-center justify-between p-5 cursor-pointer list-none font-bold">
+                <span>What are the benefits of the Gold Plan?</span>
+                <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+              </summary>
+              <div class="p-5 pt-0 text-[#9a4c5f] dark:text-[#d1a2ae] text-sm leading-relaxed">
+                The Gold plan offers maximum visibility with a Profile Highlighter, unlimited contact views, and a
+                dedicated
+                relationship manager to assist you in finding the perfect match manually.
+              </div>
+            </details>
+            <details
+              class="group bg-white dark:bg-[#2d1a1f] border border-[#e7cfd5] dark:border-[#3d2a2f] rounded-xl overflow-hidden">
+              <summary class="flex items-center justify-between p-5 cursor-pointer list-none font-bold">
+                <span>Is my payment information safe?</span>
+                <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+              </summary>
+              <div class="p-5 pt-0 text-[#9a4c5f] dark:text-[#d1a2ae] text-sm leading-relaxed">
+                We use 256-bit SSL encryption for all transactions. We do not store your credit card or CVV details on
+                our
+                servers.
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer class="mt-12 py-10 border-t border-[#e7cfd5] dark:border-gray-800 bg-white dark:bg-background-dark px-4">
+        <div class="max-w-[1200px] mx-auto text-center pl-10">
+          <div class="flex items-center justify-center gap-2 text-primary mb-4">
+            <span class="material-symbols-outlined">health_and_safety</span>
+            <span class="font-bold">Safe Matrimony Tips</span>
+          </div>
+          <p class="text-sm text-gray-500 max-w-2xl mx-auto mb-6">
+            Never share your financial details or transfer money to anyone. Report suspicious profiles to our
+            safety
+            team immediately. All profiles are manually screened but users are advised to perform their own
+            background checks.
+          </p>
+          <p class="text-xs text-gray-400">© 2024 EternalVows Matrimony Services. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </main>
+  </div>
+</body>
+
+</html>
